@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@mixin grid(){
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 10px;
+}
+
+$my_margin: 10px;
+$my_padding: 15px;
+
+.App{
+    padding: 10px;
+    background-color: rgb(238, 230, 218);
+    @include grid();
+    &__item {
+        padding: $my_padding;
+        transition: padding 500ms ;
+        &:hover{
+            padding: 50px;
+            background-color: transparent;
+            z-index: 1;
+            box-shadow: 0 0px 15px 0px brown;
+        }
+        img{
+            width: 100%;
+        }
+    }
+    &__title {
+        padding: $my_padding;
+        margin-top: $my_margin;
+    }
+    
+    &__desc {
+        padding: $my_padding;
+        margin-top: $my_margin;
+        margin-bottom: $my_margin;
+    }
+    &__more {
+        padding: $my_padding;
+        &:hover {
+            color: red;
+        }
+        
+    }
+}
