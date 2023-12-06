@@ -1,0 +1,48 @@
+.SportBlock {
+  width: 100%;
+  display: flex;
+  padding: 5px;
+  gap: 20px;
+
+  &__item {
+    width: 33%;
+
+    img {
+      max-width: 100%;
+    }
+
+    div {
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+
+      h2 {
+        font-size: 19px;
+        letter-spacing: -0.8px;
+        color: #102030;
+        font-weight: 900;
+      }
+
+      p {
+        color: #201111;
+        margin: 15px 0;
+        font-size: 22px;
+      }
+
+      button {
+        margin-top: 10px;
+        outline: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        font-size: 18px;
+        color: #61616d;
+
+        &:hover {
+          color: #999;
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
