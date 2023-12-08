@@ -6,6 +6,7 @@
   inset: 0 0 0 0;
   background-color: rgba($color: #000, $alpha: 0.8);
   &__content {
+    animation: anima 0.2s alternate both;
     padding: 1em;
     background-color: #111;
     color: royalblue;
@@ -28,5 +29,14 @@
         background-color: #ff3434;
       }
     }
+  }
+}
+
+@keyframes anima {
+  0% {
+    transform: scale(0, 0);
+  }
+  100% {
+    transform: scale(1, 1);
   }
 }

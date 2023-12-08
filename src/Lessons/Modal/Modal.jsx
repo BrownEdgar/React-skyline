@@ -1,14 +1,29 @@
 import PropTypes from 'prop-types'
 
 import './Modal.scss'
+import { useEffect } from 'react';
 
-export default function Modal({ toggleModal }) {
+export default function Modal({ toggleModal, children }) {
+
+  useEffect(() => {
+    const handleClick = (e) => {
+      const { className } = e.target;
+      if (className === 'Modal') {
+        toggleModal()
+      }
+    }
+
+    window.addEventListener('click', handleClick)
+
+    return () => window.removeEventListener('click', handleClick)
+
+  }, [])
+
+
   return (
     <div className='Modal'>
       <div className='Modal__content'>
-        <h2>Are you sure?</h2>
-        <button onClick={toggleModal}>cancel</button>
-        <button className='btn__delete'>delete</button>
+        {children}
       </div>
     </div>
   )
@@ -16,5 +31,6 @@ export default function Modal({ toggleModal }) {
 
 
 Modal.propTypes = {
-  toggleModal: PropTypes.func.isRequired
+  toggleModal: PropTypes.func.isRequired,
+
 }
