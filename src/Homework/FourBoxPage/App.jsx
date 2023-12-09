@@ -16,7 +16,7 @@ export default function App() {
       id: 2,
       title: "Process Step Two",
       text: text,
-      image: "./images/sport1.jpg",
+      image: "./images/img2.jpg",
     },
     {
       id: 3,

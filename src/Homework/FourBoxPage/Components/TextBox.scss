@@ -9,9 +9,11 @@
     background-color: #fff;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     border-radius: 10px;
+    overflow: hidden;
 
     img {
       max-width: 100%;
+      min-height: 50%;
     }
 
     div {
