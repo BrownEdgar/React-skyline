@@ -1,29 +1,52 @@
-import { useState } from "react";
-import List from "./List/List";
+import { useEffect, useState } from "react";
+import Modal from "./Modal/Modal";
 import './App.scss'
 
 export default function App() {
-  const [sport, setSport] = useState([
-    {
-      id: 1,
-      image: "https://images.unsplash.com/photo-1580692475446-c2fabbbbf835?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      name: "BETTER CHEMISTRY",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat, voluptatem officia vel nisi ea?",
-    },
-    {
-      id: 2,
-      image: "https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHNwb3J0fGVufDB8MXwwfHx8MA%3D%3D",
-      name: "BETTER PRACTICE",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat, voluptatem officia vel nisi ea?",
-    },
-    {
-      id: 3,
-      image: "https://images.unsplash.com/photo-1507034589631-9433cc6bc453?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fHNwb3J0fGVufDB8MXwwfHx8MA%3D%3D",
-      name: "INDUSTRY COLLABORATION",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit fugiat, voluptatem officia vel nisi ea?",
-    },
-  ]);
+  const [isOpen, setIsOpen] = useState(false)
+  const [users, setUsers] = useState([])
+
+  const toggleModal = () => {
+    setIsOpen(!isOpen)
+  }
+  
+  const toggleDelete = () => {
+    setLanguages(languages.toSpliced(0, 1))
+    setIsOpen(!isOpen);
+  }
+
+  useEffect(() => {
+    axios.get("https://jsonplaceholder.typicode.com/users", {
+      params: {
+        _limit: 10
+      }
+    }).then(res => {
+      const posts = res.data.map(({ id }) => { id })
+      setUsers(posts)
+    })
+     
+  }, [])
+  
+
+
   return (
-      <List list={sport} />
+    <div>
+      {
+        isOpen ? <Modal toggleModal={toggleModal} toggleDelete = {toggleDelete} /> : null
+      }
+      <div className="flex">
+        {
+          users.map((el) => {
+        return (
+          <div key={el.id}>
+            <h1>o</h1>
+            <button className="delete" onClick={toggleModal}>
+              Delete
+            </button>
+          </div>
+        );
+          })
+        }</div>
+      </div>
   );
 }
