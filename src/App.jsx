@@ -49,7 +49,10 @@ export default function App() {
               />
               <h1>{el.username}</h1>
               <p>{el.name}</p>
-              <button className="delete" onClick={toggleModal}>Delete</button>
+              <button className="delete" onClick={() => {
+                setCurrentIndex(el.id)
+                toggleModal()
+              }}>Delete</button>
             </div>
           );
         })}
