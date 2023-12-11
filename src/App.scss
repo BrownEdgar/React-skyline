@@ -1,23 +1,46 @@
-.flex{
-    display: flex;
-    align-items: center;
-    flex-wrap:wrap;
-    gap: 40px;
-    div{
-        box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
-        border-top:4px solid tomato;
-        width: 350px;
-        height: 200px;
-        .delete{
-            border: 0;
-            background-color: rgb(241, 56, 23);
-            color: white;
-            border-radius: 5px;
-            padding: .5em;
-            font-size: 18px;
-            margin-top: 35px;
-            margin-left: 15px;
-            cursor: pointer;
-        }
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+.flex {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  div {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border-top: 4px solid tomato;
+    width: 350px;
+    height: 200px;
+    h1 {
+      position: relative;
+      display: inline-block;
+      top: -25px;
+      margin-left: 4px;
+      margin-bottom: 4px;
+      font-weight: 400;
+      width: 200px;
     }
+    p {
+      margin: 10px 5px;
+      font-size: 28px;
+            font-weight: 300;
+    }
+    img {
+      width: 50px;
+      height: 50px;
+      border: 2px solid black;
+      border-radius: 50px;
+      margin: 15px 10px 0px 8px;
+    }
+    .delete {
+      border: 0;
+      background-color: rgb(241, 56, 23);
+      color: white;
+      border-radius: 5px;
+      padding: 0.5em;
+      font-size: 18px;
+      cursor: pointer;
+      margin-left: 8px;
+      margin-top: 10px;
+    }
+  }
 }
