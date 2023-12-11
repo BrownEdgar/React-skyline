@@ -1,0 +1,60 @@
+.UserBox {
+  width: 100%;
+
+  button {
+    border: none;
+    outline: none;
+  }
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 50px;
+  }
+  &__item {
+    position: relative;
+    background-color: #1b242d;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.15s ease-out;
+    span {
+      position: absolute;
+      top: 0;
+      left: 95%;
+      color: red;
+      font-weight: 900;
+      font-size: 20px;
+      cursor: pointer;
+    }
+    span:hover {
+      color: rgb(255, 125, 125);
+    }
+    img {
+      margin: auto;
+      max-width: 80%;
+
+      border-radius: 50%;
+    }
+
+    div {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        font-size: 19px;
+        letter-spacing: -0.8px;
+        color: #f7f7f8;
+        font-weight: 900;
+      }
+
+      p {
+        color: #ced0d2;
+        margin-top: 15px;
+      }
+    }
+  }
+  &__item:hover {
+    transform: scale(1.03);
+  }
+}
