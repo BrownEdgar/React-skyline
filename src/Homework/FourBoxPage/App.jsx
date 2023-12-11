@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.scss";
-import TextBox from "./Components/TextBox";
+import TextBox from "./Components/TextBox/TextBox";
+import ModalWindow from "./Components/ModalWindow/ModalWindow";
 
 const text =
   "I am alone, and feel the charm of existence in this spot, which was created for the bliss ...";
+
 export default function App() {
-  const [textBox] = useState([
+  const [textBox, setTextBox] = useState([
     {
       id: 1,
       title: "Process Step One",
@@ -31,9 +33,29 @@ export default function App() {
       image: "./images/img4.jpg",
     },
   ]);
+  const [open, setOpen] = useState(false);
+  const [deleteId, setDeleteId] = useState(null);
+
+  const toggleModal = (id = null) => {
+    setDeleteId(id);
+    setOpen(!open);
+  };
+
+  const handleDelete = () => {
+    if (deleteId !== null) {
+      setTextBox((prevTextBox) => {
+        return prevTextBox.filter((elem) => elem.id !== deleteId);
+      });
+      setOpen(!open);
+    }
+  };
+
   return (
     <div className="App">
-      <TextBox textBox={textBox} />
+      <TextBox textBox={textBox} toggleModal={toggleModal} />
+      {open ? (
+        <ModalWindow toggleModal={toggleModal} handleDelete={handleDelete} />
+      ) : null}
     </div>
   );
 }
