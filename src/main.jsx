@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './Zara/homework1/App'
+import App from './Zara/homework2/App'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

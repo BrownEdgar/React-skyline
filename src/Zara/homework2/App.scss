@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+
+@mixin grid($my_repeat:5, $my_width:25%){
+    display: grid;
+    grid-template-columns: repeat($my_repeat, $my_width);
+    gap: 10px;  
+}
+
+$my_margin: 10px;
+$my_padding: 15px;
+
+.sort{
+    border: none;
+    border-radius: 8px;
+    margin: 10px;
+    font-size: 18px;
+    padding: $my_padding;
+    width: 200px;
+    background-color: orangered;
+    color: white;
+}
+
+.App{
+    padding: 10px;
+    width: 1200px;
+    @include grid();
+    &__section {
+        @include grid($my_repeat:1,$my_width:100%);
+        grid-template-rows: auto 50px;
+        gap: 5px;
+        background-color: rgb(238, 230, 218);
+        padding: $my_padding;
+        transition: padding 500ms ;
+        &:hover{
+            background-color: transparent;
+            box-shadow: 0 0px 15px 0px rgba(179, 56, 56, 0.5);
+        }
+    }
+    &__delete{
+        font-size: 18px;
+        border: none;
+        border-radius: 8px;
+        background-color: orangered;
+        color: white;
+        cursor: pointer;
+    }
+}
