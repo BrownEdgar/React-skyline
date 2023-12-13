@@ -4,6 +4,23 @@
   button {
     border: none;
     outline: none;
+    margin-right: 20px;
+    background-color: #192129;
+    color: #f7f7f8;
+    font-size: 18px;
+    font-weight: 600;
+    width: 150px;
+    border-radius: 10px;
+    height: 45px;
+    transition: 0.08s ease-in-out;
+  }
+  button:hover {
+    cursor: pointer;
+    background-color: #06080a;
+    transform: scale(1.05);
+  }
+  button:active {
+    transform: scale(0.92);
   }
   &__container {
     display: grid;
