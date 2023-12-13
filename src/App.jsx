@@ -1,6 +1,7 @@
 import React from "react";
 import { useReducer } from "react";
 import reducer from "./reducer";
+import { FaAlignJustify } from "react-icons/fa6";
 import { CLEAR, SORT_NUMS, RANDOM_NUMBER, NUMBERS } from "./actionTypes";
 import "./App.scss";
 
@@ -28,19 +29,23 @@ export default function App() {
 
   return (
     <div>
-      {state.map((el) => {
-        return (
-          <div className="box" key={el.id}>
-            {el}
-          </div>
-        );
-      })}
-
-
-      <button onClick={addNums}>Add 10 </button>
-      <button onClick={handleClick}>Add Number</button>
-      <button onClick={handleSort}>Sort numbers</button>
-      <button onClick={handleClear}>Clear all</button>
+      <div className="a">
+        <div className="btnscontainer">
+          <button onClick={addNums}>Add 10 </button>
+          <button onClick={handleClick}>Add Number</button>
+          <button onClick={handleSort}>Sort numbers</button>
+          <button onClick={handleClear}>Clear all</button>
+        </div>
+      </div>
+      <div className="box-container">
+        {state.map((el) => {
+          return (
+            <div className="box" key={el.id}>
+              {el}
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }

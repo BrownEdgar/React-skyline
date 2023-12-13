@@ -2,6 +2,10 @@
     background-color: rgb(57, 57, 57);
 }
 
+.box-container{
+    display: inline-block;
+
+}
 .box{
     background-color: black;
     color:rgb(28, 253, 253);
@@ -15,12 +19,54 @@
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
+.btnscontainer {
+  height: 100px;
+  width: 100%;
+  background-color: rgb(41, 41, 41);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  position: sticky;
+}
 
-button{
-    padding: .5em;
-    border: none;
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    
+.btnscontainer button {
+  position: sticky;
+  padding: .5em;
+  border: none;
+  background-color: rgb(5, 5, 5);
+  color: rgb(74, 255, 74);
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+.btnscontainer {
+  height: 10px;
+  overflow: hidden;
+  width: 100%;
+  background-color: rgb(41, 41, 41);
+  position: sticky;
+  animation: increaseHeight 1s forwards;
+}
+
+
+.btnscontainer button {
+  padding: .5em;
+  border: none;
+  background-color: rgb(5, 5, 5);
+  color: rgb(74, 255, 74);
+  font-size: 24px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+@keyframes increaseHeight {
+  from {
+    height: 0px;
+  }
+  to {
+    height: 100px;
+  }
 }

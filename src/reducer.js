@@ -15,16 +15,16 @@ function reducer(state, action) {
 }
 
 const addNums = (state) => {
-        for (let i = 0; i < 10; i++) {
-             const rand = Math.round(Math.random() * 10);
-             if (!state.includes(rand)) {
-               state.toSpliced(state.length + 1, 0, rand);
-             }
+  const rand = Math.round(Math.random() * 100);
+  if (!state.includes(rand)) {
+    return [...state, rand];
+  } else {
+    return addNums(state);
+  }
+};
 
-        }
-       return state
 
-}
+
         
          
   
