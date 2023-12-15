@@ -33,7 +33,7 @@ export default function Test() {
     <div>
       <div className="Posts">
         {
-          state.posts.map(post => {
+          state.posts.map((post, index) => {
             return (
               <div key={post.id}>
 
@@ -43,7 +43,7 @@ export default function Test() {
                   {post.id}
                 </span>
                 <span className='btn-delete'>
-                  <IoCloseCircleSharp onClick={() => deleteById(post.id)} />
+                  <IoCloseCircleSharp onClick={() => deleteById(index)} />
                 </span>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
