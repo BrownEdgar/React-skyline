@@ -1,0 +1,5 @@
+export const ACTION_TYPES = {
+  SUCCESS: "SUCCESS",
+  ERROR: "ERROR",
+  LOADING: "LOADING",
+};

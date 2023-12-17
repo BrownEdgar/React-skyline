@@ -1,16 +1,26 @@
-import axios from 'axios'
-import { useEffect } from 'react'
-
+// custom hooks
+import { useRequest } from "./useRequest";
+// styles
+import styles from "./test.module.css";
 
 export default function Test() {
-  useEffect(() => {
-    axios('https://jsonplaceholder.typicode.com/todos')
-      .then(res => console.log(res.data))
-  }, [])
+  const { queryState } = useRequest();
+
+  if (queryState.error) {
+    return <div className={styles.container}>Error!</div>;
+  }
+
+  if (queryState.isLoading) {
+    return <div className={styles.container}>Loading...</div>;
+  }
 
   return (
-    <div>
-
+    <div className={styles.container}>
+      {queryState.data.map(({ title, id }) => (
+        <span key={id} className={styles.item}>
+          {title}
+        </span>
+      ))}
     </div>
-  )
+  );
 }
