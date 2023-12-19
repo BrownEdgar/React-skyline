@@ -25,11 +25,12 @@ export default function App() {
       setUserExists("User already exists");
     } else {
       const newUser = {
-        id: nanoid(),
-        email: email.value.trim(),
-        username: username.value.trim(),
-        password: password.value.trim(),
+        // id: nanoid(),
+        // email: email.value.trim(),
+        // username: username.value.trim(),
+        // password: password.value.trim(),
       };
+      setUserExists("");
       setUsers([...users, newUser]);
       e.target.reset();
     }
