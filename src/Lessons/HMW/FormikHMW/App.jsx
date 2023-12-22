@@ -5,15 +5,18 @@ import { nanoid } from "nanoid";
 import { object as yupObject, string } from "yup";
 
 const initialValues = {
-  username: "",
+  firstName: "",
   password: "",
   email: "",
 };
 
 const validationSchema = yupObject({
-  username: string().required().min(3).max(18),
+  firstName: string().required().min(3).max(18),
   password: string()
-    .matches(/^(?=.*[A-Z]).+$/, "password must by start with upperCase")
+    .matches(
+      /^(?=.*[A-Z]).+$/,
+      "Your passwor must contain at least one upper cased symbol"
+    )
     .min(8)
     .max(18)
     .required(),
@@ -43,13 +46,31 @@ export default function App() {
           console.log(formik.touched);
           return (
             <Form>
-              <Field type="text" name="username" />
-              <ErrorMessage component="p" name="username" />
-              <Field type="email" name="email" />
+              <h3>DORSIN</h3>
+              <p>Sin up for a new Account</p>
+              <label>
+                First Name
+                <Field type="text" name="firstName" />
+              </label>
+              <ErrorMessage component="p" name="firstName" />
+              <label>
+                Email
+                <Field type="email" name="email" />
+              </label>
               <ErrorMessage component="p" name="email" />
-              <Field type="password" name="password" />
+              <label>
+                Password
+                <Field type="password" name="password" />
+              </label>
               <ErrorMessage component="p" name="password" />
-              <input type="submit" />
+              <label>
+                <Field type="checkbox" name="rememberMe" />
+                Remember Me
+              </label>{" "}
+              <input type="submit" value="Sign in" />
+              <p>
+                Already have an account?<button>Sign in</button>
+              </p>
             </Form>
           );
         }}
