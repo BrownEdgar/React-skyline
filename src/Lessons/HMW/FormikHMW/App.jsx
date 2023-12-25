@@ -52,17 +52,17 @@ export default function App() {
                 First Name
                 <Field type="text" name="firstName" />
               </label>
-              <ErrorMessage component="p" name="firstName" />
+              <ErrorMessage component="p" name="firstName" className='error' />
               <label>
                 Email
                 <Field type="email" name="email" />
               </label>
-              <ErrorMessage component="p" name="email" />
+              <ErrorMessage component="p" name="email" className='error' />
               <label>
                 Password
                 <Field type="password" name="password" />
               </label>
-              <ErrorMessage component="p" name="password" />
+              <ErrorMessage component="p" name="password" className='error' />
               <label>
                 <Field type="checkbox" name="rememberMe" />
                 Remember Me
