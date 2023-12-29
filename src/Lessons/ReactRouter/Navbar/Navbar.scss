@@ -1,0 +1,38 @@
+header {
+  height: 80px;
+  padding: 10px 30px;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav {
+    width: 35%;
+    ul {
+      padding: 10px;
+      li {
+        display: inline-block;
+        margin-right: 30px;
+        font-size: 20px;
+        &:has(.active__link) {
+          transform: scale(1.2);
+          transition: 0.2s;
+        }
+        a {
+          &.active__link {
+            color: yellow;
+            position: relative;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .logo {
+    a {
+      font-size: 32px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+  }
+}
