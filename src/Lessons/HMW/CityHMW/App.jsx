@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import * as Yup from "yup";
-import { number, object, string } from "yup";
+import { object as yupObject, string } from "yup";
 
 const usersData = [
   {
@@ -71,61 +70,21 @@ const usersData = [
 ];
 
 const validationSchema = Yup.object().shape({
-  selectedCity: string().required("Please select a city"),
+  id: number().required(),
+  first_name: string().required(),
+  last_name: string().required(),
+  address: object().shape({
+    street: string().required(),
+    house: number().required(),
+    city: string().required(),
+  }),
+  age: number().required(),
+  salary: number().required(),
+  bestFriend: ring().required(),
 });
 
-const User = ({ user }) => {
-  return (
-    <div className="user-card">
-      <h3>{`${user.first_name} ${user.last_name}`}</h3>
-      <p>{`Age: ${user.age}`}</p>
-      <p>{`Address: ${user.address.street}, ${user.address.house}, ${user.address.city}`}</p>
-      <p>{`Salary: ${user.salary}`}</p>
-      <p>{`Best Friend: ${user.bestFriend}`}</p>
-    </div>
-  );
-};
-
-const App = () => {
-  const [selectedCity, setSelectedCity] = useState("");
+export default function App() {
   const [users, setUsers] = useState([...usersData]);
 
-  const filteredUsers = users.filter(
-    (user) => user.address.city === selectedCity
-  );
-
-  const handleCityChange = (e) => {
-    setSelectedCity(e.target.value);
-  };
-
-  return (
-    <div className="App">
-      <h1>User List</h1>
-      <form>
-        <label htmlFor="citySelect">Select a City:</label>
-        <select
-          id="citySelect"
-          name="city"
-          value={selectedCity}
-          onChange={handleCityChange}
-        >
-          <option value="">Select a City</option>
-          {Array.from(new Set(users.map((user) => user.address.city))).map(
-            (city) => (
-              <option key={city} value={city}>
-                {city}
-              </option>
-            )
-          )}
-        </select>
-      </form>
-      <div className="user-list">
-        {filteredUsers.map((user) => (
-          <User key={user.id} user={user} />
-        ))}
-      </div>
-    </div>
-  );
-};
-
-export default App;
+  return <div className="App"></div>;
+}
