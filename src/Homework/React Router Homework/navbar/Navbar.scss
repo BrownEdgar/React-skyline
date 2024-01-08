@@ -1,0 +1,33 @@
+header {
+  margin: auto;
+  background-color: #1b192b;
+  border-radius: 0 0 10px 10px;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid wheat;
+
+  height: 120px;
+  nav {
+    width: 800px;
+    display: flex;
+    align-items: center;
+    ul {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      li {
+        font-size: 25px;
+        text-transform: uppercase;
+        font-weight: 900;
+        letter-spacing: 3px;
+        font-weight: bloder;
+        color: wheat;
+      }
+      li:hover {
+        color: rgb(255, 241, 215);
+      }
+    }
+  }
+}

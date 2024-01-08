@@ -1,0 +1,33 @@
+.Comments {
+  h1 {
+    text-align: center;
+    color: white;
+    letter-spacing: 10px;
+    font-size: 48px;
+    text-transform: uppercase;
+    margin: 40px 0 60px;
+  }
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    img {
+      width: 15%;
+      height: 15%;
+    }
+  }
+  &__box {
+    align-items: center;
+    display: flex;
+    width: 45%;
+    margin: 40px 0;
+  }
+  &__text {
+    padding: 10px;
+    h2 {
+      color: wheat;
+      margin-bottom: 10px;
+    }
+  }
+}
