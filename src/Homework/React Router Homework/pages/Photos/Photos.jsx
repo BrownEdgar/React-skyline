@@ -8,7 +8,7 @@ export default function Photos() {
   useEffect(() => {
     axios("https://jsonplaceholder.typicode.com/photos", {
       params: {
-        _limit: 30,
+        _limit: 20,
       },
     }).then((res) => setPhotos(res.data));
   }, []);

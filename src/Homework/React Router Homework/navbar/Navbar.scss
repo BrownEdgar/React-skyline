@@ -24,9 +24,22 @@ header {
         letter-spacing: 3px;
         font-weight: bloder;
         color: wheat;
-      }
-      li:hover {
-        color: rgb(255, 241, 215);
+        transition: 0.1s ease-in-out;
+        &:hover {
+          color: rgb(255, 241, 215);
+          transform: scale(1.05);
+        }
+        &:active {
+          color: rgb(212, 195, 156);
+        }
+
+        .active {
+          padding: 0 10px 5px;
+          border-bottom: 3px solid wheat;
+
+          font-size: 28px;
+          border-radius: 7px;
+        }
       }
     }
   }

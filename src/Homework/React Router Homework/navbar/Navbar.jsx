@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import ROUTES from "../routes";
 
@@ -9,22 +9,22 @@ export default function Navbar() {
       <nav>
         <ul>
           <li>
-            <Link to={ROUTES.HOME}>Home</Link>
+            <NavLink to={ROUTES.HOME}>Home</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.ABOUT}>About</Link>
+            <NavLink to={ROUTES.ABOUT}>About</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.POSTS}>Posts</Link>
+            <NavLink to={ROUTES.POSTS}>Posts</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.USERS}>Users</Link>
+            <NavLink to={ROUTES.USERS}>Users</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.PHOTOS}>Photos</Link>
+            <NavLink to={ROUTES.PHOTOS}>Photos</NavLink>
           </li>
           <li>
-            <Link to={ROUTES.COMMENT}>Comments</Link>
+            <NavLink to={ROUTES.COMMENT}>Comments</NavLink>
           </li>
         </ul>
       </nav>

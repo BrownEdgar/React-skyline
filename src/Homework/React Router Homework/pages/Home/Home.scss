@@ -3,10 +3,10 @@
     text-align: center;
   }
   h1 {
-    text-transform: uppercase;
     margin: 300px 0;
     font-size: 72px;
     letter-spacing: 30px;
+    animation: fadeUp 1.5s ease-out forwards;
   }
   h2 {
     margin-bottom: 50px;
@@ -18,5 +18,15 @@
     font-size: 20px;
     font-style: italic;
     color: wheat;
+  }
+  @keyframes fadeUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
