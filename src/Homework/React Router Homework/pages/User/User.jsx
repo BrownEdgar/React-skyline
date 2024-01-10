@@ -18,13 +18,13 @@ export default function User() {
             name: res.data.name,
             username: res.data.username,
             email: res.data.email,
-            image: `./images/Users/user_${userId}.jpg`,
+            image: `/images/Users/user_${userId}.jpg`,
           };
           setUser(userData);
         });
     }
   }, [userId]);
-
+  console.log(user)
   return (
     <div className="User">
       {user ? (

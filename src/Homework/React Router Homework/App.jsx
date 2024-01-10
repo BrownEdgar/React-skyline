@@ -1,5 +1,3 @@
-import React from "react";
-
 import {
   Route,
   RouterProvider,
@@ -21,6 +19,7 @@ import {
   Post,
 } from "./pages/index";
 import Layouts from "./Layouts/Layouts";
+import { usersLoader } from './pages/Users/Users';
 
 export default function App() {
   const router = createBrowserRouter(
@@ -30,7 +29,7 @@ export default function App() {
         <Route path={ROUTES.ABOUT} element={<About />} />
         <Route path={ROUTES.POSTS} element={<Posts />} />
         <Route path={ROUTES.POST} element={<Post />} />
-        <Route path={ROUTES.USERS} element={<Users />} />
+        <Route path={ROUTES.USERS} element={<Users />} loader={usersLoader} />
         <Route path={ROUTES.USER} element={<User />} />
         <Route path={ROUTES.PHOTOS} element={<Photos />} />
         <Route path={ROUTES.COMMENT} element={<Comments />} />
