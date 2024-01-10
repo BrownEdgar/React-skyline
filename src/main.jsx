@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import App from './Lessons/ReactRouter/App'
+import App from './Lessons/jsonServer/App'
 import './index.css'
 
 
