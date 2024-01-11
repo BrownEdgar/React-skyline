@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "./Posts.scss";
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 export default function Posts() {
-  const [posts, setPosts] = useState([]);
-
-  useEffect(() => {
-    axios
-      .get("https://jsonplaceholder.typicode.com/posts", {
-        params: {
-          _limit: 25,
-        },
-      })
-      .then((res) => setPosts(res.data));
-  }, []);
+  const posts = useLoaderData();
 
   return (
     <div className="Posts">
@@ -30,3 +19,11 @@ export default function Posts() {
     </div>
   );
 }
+export const postsLoader = async () => {
+  const res = await axios.get("https://jsonplaceholder.typicode.com/posts", {
+    params: {
+      _limit: 25,
+    },
+  });
+  return res.data;
+};
