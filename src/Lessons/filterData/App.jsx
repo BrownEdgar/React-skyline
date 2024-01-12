@@ -1,46 +1,44 @@
 import axios from "axios";
-import React, { useEffect, useState, useTransition } from "react";
-let count = 0;
+import { useEffect, useState, useTransition } from "react";
+import filteredData from "../../helpers/filteredData";
+
+const DB_URL = import.meta.env.VITE_DB_URL;
+
 export default function App() {
-  console.log("app render");
   const [photos, setPhotos] = useState([]);
   const [searchValue, setSearchValue] = useState("");
   const [isPending, startTransition] = useTransition();
+  const [id, setId] = useState(null);
 
   useEffect(() => {
-    axios("https://jsonplaceholder.typicode.com/photos").then((res) =>
-      setPhotos(res.data)
-    );
+    axios(DB_URL).then((res) => setPhotos(res.data));
   }, []);
 
+  // 50ms 100ms
   const handleChange = (e) => {
-    startTransition(() => setSearchValue(e.target.value.toLowerCase()));
+    if (id) {
+      clearTimeout(id);
+    }
+
+    const sto = setTimeout(() => {
+      startTransition(() => setSearchValue(e.target.value.toLowerCase()));
+    }, 200);
+    setId(sto);
   };
 
-  const filteredData = () => {
-    count++;
-    if (!searchValue) return photos;
-    const result = photos.filter((elem) => elem.title.includes(searchValue));
-    return result;
-  };
-
-  console.log(count);
   return (
     <div className="App">
       <form>
         <h3>you search : {searchValue} </h3>
-        <input
-          type="search"
-          placeholder="search"
-          value={searchValue}
-          onChange={handleChange}
-        />
+        <input type="search" placeholder="search" onChange={handleChange} />
       </form>
       <div className="Photos">
         {isPending ? (
           <h1>Loading...</h1>
         ) : (
-          filteredData().map((elem) => <h2 key={elem.id}>{elem.title}</h2>)
+          filteredData(searchValue, photos).map((elem) => (
+            <h2 key={elem.id}>{elem.title}</h2>
+          ))
         )}
       </div>
     </div>
