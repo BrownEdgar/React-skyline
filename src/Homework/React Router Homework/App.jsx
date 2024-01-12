@@ -10,8 +10,10 @@ import "./App.scss";
 import {
   About,
   Comments,
+  Comment,
   Home,
   Photos,
+  Photo,
   Posts,
   Users,
   User,
@@ -21,6 +23,8 @@ import {
 import Layouts from "./Layouts/Layouts";
 import { usersLoader } from "./pages/Users/Users";
 import { postsLoader } from "./pages/Posts/Posts";
+import { photosLoader } from "./pages/Photos/Photos";
+import { commentsLoader } from "./pages/Comments/Comments";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -32,8 +36,18 @@ export default function App() {
         <Route path={ROUTES.POST} element={<Post />} />
         <Route path={ROUTES.USERS} element={<Users />} loader={usersLoader} />
         <Route path={ROUTES.USER} element={<User />} />
-        <Route path={ROUTES.PHOTOS} element={<Photos />} />
-        <Route path={ROUTES.COMMENT} element={<Comments />} />
+        <Route
+          path={ROUTES.PHOTOS}
+          element={<Photos />}
+          loader={photosLoader}
+        />
+        <Route path={ROUTES.PHOTO} element={<Photo />} />
+        <Route
+          path={ROUTES.COMMENTS}
+          element={<Comments />}
+          loader={commentsLoader}
+        />
+        <Route path={ROUTES.COMMENT} element={<Comment />} />
         <Route path={ROUTES.ERROR} element={<Error />} />
       </Route>
     )

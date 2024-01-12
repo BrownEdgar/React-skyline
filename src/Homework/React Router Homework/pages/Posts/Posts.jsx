@@ -11,8 +11,11 @@ export default function Posts() {
       <div className="Posts__container">
         {posts.map((post) => (
           <Link to={`/posts/${post.id}`} className="Posts__box" key={post.id}>
-            <h2>{post.title}</h2>
-            <p>{post.body}</p>
+            <h2>
+              {post.title.length > 35
+                ? `${post.title.slice(0, 35)}...`
+                : post.title}
+            </h2>
           </Link>
         ))}
       </div>

@@ -1,0 +1,54 @@
+.Comment {
+  width: 50%;
+  margin: 75px auto 20px;
+
+  &__box {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .icon {
+      position: absolute;
+      font-size: 32px;
+      top: 2px;
+      left: 5px;
+      color: wheat;
+      cursor: pointer;
+      &:hover {
+        color: rgb(185, 161, 117);
+      }
+    }
+    .comment {
+      font-style: italic;
+      font-size: 22px;
+      width: 85%;
+      margin: auto;
+    }
+    img {
+      width: 35%;
+      margin: auto;
+    }
+    .info {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px 0;
+      .title {
+        width: 20%;
+        text-align: right;
+        color: wheat;
+        h2 {
+          margin-top: 25px;
+        }
+      }
+      .desc {
+        font-size: 24px;
+        width: 75%;
+        p {
+          margin-top: 25px;
+        }
+      }
+    }
+  }
+}

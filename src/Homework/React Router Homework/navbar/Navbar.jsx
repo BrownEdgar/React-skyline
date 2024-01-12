@@ -24,7 +24,7 @@ export default function Navbar() {
             <NavLink to={ROUTES.PHOTOS}>Photos</NavLink>
           </li>
           <li>
-            <NavLink to={ROUTES.COMMENT}>Comments</NavLink>
+            <NavLink to={ROUTES.COMMENTS}>Comments</NavLink>
           </li>
         </ul>
       </nav>

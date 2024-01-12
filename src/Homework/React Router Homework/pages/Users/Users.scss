@@ -23,6 +23,8 @@
     transition: 0.25s ease-in;
     &:hover {
       transform: translateY(-5%) scale(1.03);
+      filter: blur(1px) brightness(80%) grayscale(70%);
+
       color: wheat;
     }
 
@@ -30,6 +32,7 @@
       width: 100%;
       border-radius: 50%;
       outline: 1.2px solid wheat;
+      transition: 0.1s ease-in;
       border: 13.8px solid #211f35;
     }
     h2 {

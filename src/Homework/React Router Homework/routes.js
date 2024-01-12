@@ -6,7 +6,9 @@ const ROUTES = {
   USERS: `users`,
   USER: `users/:userId`,
   PHOTOS: `photos`,
-  COMMENT: `coments`,
+  PHOTO: `photos/:photoId`,
+  COMMENTS: `comments`,
+  COMMENT: `comments/:commentId`,
   ERROR: `*`,
 };
 
