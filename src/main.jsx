@@ -1,6 +1,8 @@
 import ReactDOM from 'react-dom/client'
-import App from './Lessons/jsonServer/App'
+import App from './Lessons/routedwithServer/App'
 import './index.css'
 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />)
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <App />
+)

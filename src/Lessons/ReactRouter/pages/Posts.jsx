@@ -3,8 +3,6 @@ import { Link, useLoaderData } from 'react-router-dom';
 
 export default function Posts() {
   const posts = useLoaderData();
-  console.log('render')
-
 
   return (
     <div className='Posts'>
