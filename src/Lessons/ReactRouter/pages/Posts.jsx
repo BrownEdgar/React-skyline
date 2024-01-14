@@ -1,15 +1,10 @@
 import axios from 'axios';
-import { useState, useEffect } from 'react';
-
-
+import { Link, useLoaderData } from 'react-router-dom';
 
 export default function Posts() {
-  const [posts, setPosts] = useState([]);
+  const posts = useLoaderData();
+  console.log('render')
 
-  useEffect(() => {
-    axios(import.meta.env.VITE_DB_URL + 'posts')
-      .then(res => setPosts(res.data))
-  }, [])
 
   return (
     <div className='Posts'>
@@ -18,14 +13,21 @@ export default function Posts() {
         {
           posts.map(elem => {
             return (
-              <div key={elem.id}>
+              <Link key={elem.id} to={`/posts/${elem.id}`} >
                 <h2>{elem.title}</h2>
-                <p>{elem.body}</p>
-              </div>
+              </Link>
             )
           })
         }
       </div>
     </div>
   )
+}
+
+
+// eslint-disable-next-line react-refresh/only-export-components
+export const postsLoader = async () => {
+  const posts = await axios(import.meta.env.VITE_DB_URL + 'posts')
+  const data = posts.data;
+  return data
 }
