@@ -26,6 +26,9 @@ export default function Navbar() {
           <li>
             <NavLink to={ROUTES.COMMENTS}>Comments</NavLink>
           </li>
+          <li>
+            <NavLink to={ROUTES.PRODUCTS}>Products</NavLink>
+          </li>
         </ul>
       </nav>
     </header>

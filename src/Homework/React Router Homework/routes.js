@@ -9,6 +9,9 @@ const ROUTES = {
   PHOTO: `photos/:photoId`,
   COMMENTS: `comments`,
   COMMENT: `comments/:commentId`,
+  PRODUCTS: `products`,
+  PRODUCT: `products/:productId`,
+  EDITOR: `edit`,
   ERROR: `*`,
 };
 

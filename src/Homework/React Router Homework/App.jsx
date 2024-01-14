@@ -19,12 +19,17 @@ import {
   User,
   Error,
   Post,
+  Products,
+  Product,
+  Editor,
 } from "./pages/index";
 import Layouts from "./Layouts/Layouts";
 import { usersLoader } from "./pages/Users/Users";
 import { postsLoader } from "./pages/Posts/Posts";
 import { photosLoader } from "./pages/Photos/Photos";
 import { commentsLoader } from "./pages/Comments/Comments";
+import { productsLoader } from "./pages/Products/Products";
+import { editorLoader } from "./pages/Editor/Editor";
 
 export default function App() {
   const router = createBrowserRouter(
@@ -48,6 +53,18 @@ export default function App() {
           loader={commentsLoader}
         />
         <Route path={ROUTES.COMMENT} element={<Comment />} />
+        <Route
+          path={ROUTES.PRODUCTS}
+          element={<Products />}
+          loader={productsLoader}
+        />
+        <Route
+          path={ROUTES.EDITOR}
+          element={<Editor />}
+          loader={editorLoader}
+        />
+        <Route path={ROUTES.PRODUCT} element={<Product />} />
+
         <Route path={ROUTES.ERROR} element={<Error />} />
       </Route>
     )

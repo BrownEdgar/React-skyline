@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Home.scss";
+import axios from "axios";
 
 export default function Home() {
+  const [first, setfirst] = useState([]);
+  useEffect(() => {
+    axios("http://localhost:3000/products").then((res) =>
+      console.log(res.data)
+    );
+  }, []);
+
   return (
     <div className="Home">
       <h1>Welcome</h1>

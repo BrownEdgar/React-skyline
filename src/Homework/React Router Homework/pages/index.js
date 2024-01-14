@@ -8,4 +8,7 @@ export { default as Photos } from "./Photos/Photos";
 export { default as Photo } from "./Photo/Photo";
 export { default as Comments } from "./Comments/Comments";
 export { default as Comment } from "./Comment/Comment";
+export { default as Products } from "./Products/Products";
+export { default as Product } from "./Product/Product";
 export { default as Error } from "./Error/Error";
+export { default as Editor } from "./Editor/Editor";
