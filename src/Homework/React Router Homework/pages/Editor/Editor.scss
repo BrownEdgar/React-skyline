@@ -1,21 +1,21 @@
 .Editor {
+  -webkit-user-select: none;
   &__container {
     display: flex;
     flex-wrap: wrap;
     gap: 5%;
     position: relative;
   }
-
-  .edit-button {
-    display: flex;
-    align-items: center;
+  .add-icon {
     position: absolute;
-    color: orangered;
-    right: 60px;
-    font-weight: 900;
-    font-size: 28px;
+    color: greenyellow;
+    top: 22.5%;
+    right: 8%;
+    // width: 35px;
+    // height: 30px;
+    font-size: 42px;
     &:hover {
-      border-bottom: 2px solid orangered;
+      color: green;
     }
   }
 

@@ -1,11 +1,21 @@
+import React, { useEffect, useState } from "react";
 import axios from "axios";
-import React from "react";
-import "./Editor.scss";
-import { Link, useLoaderData } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { FaPlusCircle } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
+import "./Editor.scss";
+import ROUTES from "../../routes";
 
 export default function Editor() {
-  const products = useLoaderData();
+  const [products, setProducts] = useState([]);
+  const [currentId, setCurrentId] = useState(null);
+
+  useEffect(() => {
+    axios.get("http://localhost:3000/products").then((res) => {
+      setProducts(res.data);
+    });
+  }, [currentId]);
+
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:3000/products/${id}`);
   };
@@ -13,12 +23,20 @@ export default function Editor() {
   return (
     <div className="Editor">
       <h1>Edit Products</h1>
+      <Link to={"/" + ROUTES.ADD}>
+        <FaPlusCircle className="add-icon" />
+      </Link>
 
       <div className="Editor__container">
         {products.map((product) => (
           <div className="Editor__box" key={product.id}>
             <div className="overlay">
-              <span onClick={deleteProduct(product.id)}>
+              <span
+                onClick={() => {
+                  deleteProduct(product.id);
+                  setCurrentId(product.id);
+                }}
+              >
                 <MdDeleteForever className="icon-delete" />
               </span>
               <div className="name">
@@ -39,9 +57,3 @@ export default function Editor() {
     </div>
   );
 }
-
-export const editorLoader = async () => {
-  const res = await axios.get("http://localhost:3000/products", {});
-  console.log(res.data);
-  return res.data;
-};

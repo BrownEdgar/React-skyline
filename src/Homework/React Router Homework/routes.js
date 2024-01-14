@@ -12,6 +12,7 @@ const ROUTES = {
   PRODUCTS: `products`,
   PRODUCT: `products/:productId`,
   EDITOR: `edit`,
+  ADD: `add`,
   ERROR: `*`,
 };
 

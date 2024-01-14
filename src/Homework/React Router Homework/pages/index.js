@@ -12,3 +12,4 @@ export { default as Products } from "./Products/Products";
 export { default as Product } from "./Product/Product";
 export { default as Error } from "./Error/Error";
 export { default as Editor } from "./Editor/Editor";
+export { default as Add } from "./Add/Add";
