@@ -1,3 +1,28 @@
 {
-  "quotes": []
+  "products": [
+    {
+      "id": "69i_T",
+      "title": "tv samsung tr348",
+      "price": 68200,
+      "category": "",
+      "description": "lsjdhsjaghd ksah dkhas dkahs kdljhsa jl;dkj asldj asldj as ",
+      "image": "https://images.unsplash.com/photo-1704972841788-86fac20fc87e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8"
+    },
+    {
+      "id": "mQb7_",
+      "title": "asdasd",
+      "price": 213123,
+      "category": "",
+      "description": "asdasdasd",
+      "image": "https://images.unsplash.com/photo-1682685797736-dabb341dc7de?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxlZGl0b3JpYWwtZmVlZHwxfHx8ZW58MHx8fHx8"
+    },
+    {
+      "id": "WF_q8",
+      "title": "asdasdasdasd",
+      "price": 123123123,
+      "category": "",
+      "description": "asdasdasd",
+      "image": "https://images.unsplash.com/photo-1705130819768-354fcee50404?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwzfHx8ZW58MHx8fHx8"
+    }
+  ]
 }
