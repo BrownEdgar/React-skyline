@@ -1,0 +1,58 @@
+.Product {
+  .form{
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(4, 4, 83, 0.2);
+    margin: 40px 5px;
+    width: 50%;
+    box-shadow: 0 0 20px 15px rgba(4, 4, 83, 0.2);
+    .submit{
+        cursor: pointer;
+        background-color: rgb(4, 4, 83);
+        color: white;
+        padding: 10px;
+        font-size: 15px; 
+        border-radius: 5px; 
+    }
+    .forms{
+        margin: 10px;
+        #title, #price, #select, #description, #image {
+            cursor: pointer;
+            height: 30px;
+            width: 100%;
+            font-size: 15px;
+            border-radius: 5px;
+        }
+    }
+}
+    width: 100%;
+    padding: 1em;
+    min-height: 500px;
+    border-bottom: 2px solid grey;
+    display: flex;
+    gap: 30px;
+    align-items: start;
+    &__image {
+      width: 380px;
+      object-fit: cover;
+    }
+    &__back {
+      margin-right: 10px;
+      margin-bottom: 10px;
+      position: relative;
+      font-size: 20px;
+      width: 200px;
+      padding: 0.6rem 20px;
+      border-radius: 8px;
+      background-color: rgb(4, 4, 83);
+      color: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      & > svg {
+        position: absolute;
+        top: 10px;
+        left: 6px;
+      }
+    }
+  }
+  

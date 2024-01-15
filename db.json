@@ -1,0 +1,44 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "title": "Iphone 15 pro max",
+      "price": "2100",
+      "category": "electronics",
+      "description": "loreLorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium excepturi impedit fugit sit vel, officia explicabo minima atque exercitationem, perspiciatis iusto numquam eius quibusdam voluptatibus accusantium asperiores, ipsam adipisci culpa!m",
+      "image": "https://images.unsplash.com/photo-1537589376225-5405c60a5bd8?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "O5dbJ",
+      "title": "Product N one",
+      "price": 520566,
+      "category": "jewelery",
+      "description": "asdsad asdsadsad",
+      "image": "https://images.unsplash.com/photo-1705002455875-29da8631d626?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "NE_7r",
+      "title": "power bank",
+      "price": 45000,
+      "category": "",
+      "description": "Внешний аккумулятор Xiaomi Mi Power Bank 3 Pro 20000mah 50W MAX, портативный аккумулятор, Power Bank, черный",
+      "image": "https://avatars.mds.yandex.net/get-mpic/11404302/2a0000018b5cd0e63d4a143af26954467263/600x800"
+    },
+    {
+      "id": "9KaVq",
+      "title": "hkbvkjb",
+      "price": 97974,
+      "category": "men's clothing",
+      "description": "jbkjbljb",
+      "image": "https://avatars.mds.yandex.net/get-mpic/4448884/img_id6599794068360807117.jpeg/600x800"
+    },
+    {
+      "id": "dEBzg",
+      "title": "fjvndjf",
+      "price": 9794,
+      "category": "women's clothing",
+      "description": "vjdbvjkbsdjv",
+      "image": "https://bullfinch.ru/storage/app/uploads/public/64d/630/4a2/thumb_109028_600_680_0_0_crop.webp"
+    }
+  ]
+}
