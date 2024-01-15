@@ -11,7 +11,7 @@ export default function Product() {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    if (productId > 0 && productId <= 13) {
+    if (productId) {
       axios
         .get(`http://localhost:3000/products/${productId}`)
         .then((res) => setProduct(res.data));
