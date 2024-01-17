@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './Zara/homeworkRouters/App'
+import App from './Zara/customHooks/App'
 import './index.css'
 // import { BrowserRouter as Router } from 'react-router-dom'
 
