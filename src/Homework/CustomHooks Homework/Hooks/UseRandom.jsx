@@ -1,9 +1,4 @@
-// # Homework
-
-// - ստեղծել սեփական (առանձին ֆայլով) `useRandom` customHook,որը պետք է մեզ վերադարձնի զանգված պատահական `number` || `string` էլեմենտներով՝ հետևյալ պայմաններով։ Ստանալու է 2 կամ 3 պարամետր,որոնցից առաջինը պատահական էլեմենտների քանակն, 2 -տիպը, 3- տառատեսակը։
-// Օր․՝ `useRandom(4, 'number')` => պետք է վերադարձնի 4 պատահական թիվ 1-1000 միձակայքից։
-// Օր․՝ `useRandom(4, 'string', "lower")` => պետք է վերադարձնի 4 պատահական լատինական փոքրատառ։
-// Օր․՝ `useRandom(6, 'string', "upper")`=> պետք է վերադարձնի 6 պատահական լատինական Մեծատառ
+// useRandom.jsx
 
 import { useState, useEffect } from "react";
 
@@ -17,7 +12,6 @@ export default function useRandom(count, type, letterCase) {
           return Math.floor(Math.random() * 1000) + 1;
         case "string":
           let characters = "abcdefghijklmnopqrstuvwxyz";
-          characters.length;
           if (letterCase === "upper") {
             characters = characters.toUpperCase();
           }
@@ -34,7 +28,7 @@ export default function useRandom(count, type, letterCase) {
     for (let i = 0; i < count; i++) {
       generatedArray.push(randomElements(type, letterCase));
     }
-    setArray(generatedArray.join(", "));
+    setArray(generatedArray);
   }, [count, type, letterCase]);
 
   return array;
