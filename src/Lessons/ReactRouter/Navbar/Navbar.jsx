@@ -1,12 +1,20 @@
 import './Navbar.scss'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 import ROUTES from '../routes'
+import { useState, useEffect } from 'react'
 
 const toggleClassActive = ({ isActive }) => {
   return isActive ? "active__link" : ''
 }
 
-export default function Navbar() {
+export default function Navbar({ isLogin }) {
+  const navigate = useNavigate()
+  const logout = () => {
+    window.localStorage.removeItem('login');
+    navigate(ROUTES.HOME)
+  }
+
+
   return (
     <header>
       <div className="logo">
@@ -26,6 +34,13 @@ export default function Navbar() {
           <li>
             <NavLink to={ROUTES.POSTS} className={toggleClassActive}>Posts</NavLink>
           </li>
+
+          {isLogin ? (
+            <li>
+              <button onClick={logout}>Logout</button>
+            </li>
+          ) : null}
+
         </ul>
       </nav>
     </header>

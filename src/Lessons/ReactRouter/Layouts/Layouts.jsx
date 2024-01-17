@@ -1,11 +1,18 @@
 import { Outlet } from 'react-router-dom'
 import Navbar from '../Navbar/Navbar'
+import { useEffect, useState } from 'react'
 
 export default function Layouts() {
+  const [isLogin, setIsLogin] = useState(Boolean(window.localStorage.getItem('login')))
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setIsLogin(Boolean(window.localStorage.getItem('login')))
+  })
 
   return (
     <>
-      <Navbar />
+      <Navbar isLogin={isLogin} />
       <Outlet />
 
       <footer>
