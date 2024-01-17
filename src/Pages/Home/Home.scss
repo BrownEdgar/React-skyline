@@ -1,0 +1,22 @@
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    p{
+        margin-top:24px ;
+        font-size: 24px;
+        width: 920px;
+    }
+    .icon-container{
+        margin-top:15px ;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+         .icon{
+        font-size: 64px;
+        margin: 0 5px;
+    }
+    }
+   
+}
