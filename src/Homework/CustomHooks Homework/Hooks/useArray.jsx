@@ -3,22 +3,20 @@ import { useState } from "react";
 export default function useArray(array) {
   const [data, setData] = useState(array);
 
-  const push = (number) => {
-    setData((prevArray) => [...prevArray, number]);
+  const push = () => {
+    setData((prevArray) => [...prevArray, 7]);
   };
 
-  const update = (index, number) => {
-    setData((prevArray) =>
-      prevArray.map((item, i) => (i === index ? number : item))
-    );
+  const update = () => {
+    setData((prevArray) => prevArray.map((array, i) => (i === 1 ? 9 : array)));
   };
 
-  const remove = (index) => {
-    setData((prevArray) => prevArray.filter((_, i) => i !== index));
+  const remove = () => {
+    setData((prevArray) => prevArray.filter((_, i) => i !== 1));
   };
 
-  const filter = (condition) => {
-    setData((prevArray) => prevArray.filter(condition));
+  const filter = () => {
+    setData((prevArray) => prevArray.filter((el) => el < 4));
   };
   const clear = () => {
     setData([]);

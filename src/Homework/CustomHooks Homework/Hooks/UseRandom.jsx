@@ -1,35 +1,35 @@
-// useRandom.jsx
+// useRandom.js
+import { useState } from "react";
 
-import { useState, useEffect } from "react";
+export default function useRandom() {
+  const [count, setCount] = useState();
+  const [type, setType] = useState();
+  const [letterCase, setLetterCase] = useState();
 
-export default function useRandom(count, type, letterCase) {
-  const [array, setArray] = useState([]);
+  const generateRandomElement = (type, letterCase) => {
+    switch (type) {
+      case "number":
+        return Math.floor(Math.random() * 10);
+      case "string":
+        let characters = "abcdefghijklmnopqrstuvwxyz";
+        if (letterCase === "upper") {
+          characters = characters.toUpperCase();
+        }
+        return characters.charAt(Math.floor(Math.random() * characters.length));
+      default:
+        return null;
+    }
+  };
 
-  useEffect(() => {
-    const randomElements = (type, letterCase) => {
-      switch (type) {
-        case "number":
-          return Math.floor(Math.random() * 1000) + 1;
-        case "string":
-          let characters = "abcdefghijklmnopqrstuvwxyz";
-          if (letterCase === "upper") {
-            characters = characters.toUpperCase();
-          }
-          return characters.charAt(
-            Math.floor(Math.random() * characters.length)
-          );
-        default:
-          return null;
-      }
-    };
-
-    const generatedArray = [];
+  const getRandom = () => {
+    const generatedData = [];
 
     for (let i = 0; i < count; i++) {
-      generatedArray.push(randomElements(type, letterCase));
+      generatedData.push(generateRandomElement(type, letterCase));
     }
-    setArray(generatedArray);
-  }, [count, type, letterCase]);
 
-  return array;
+    return generatedData;
+  };
+
+  return { getRandom, setCount, setType, setLetterCase };
 }

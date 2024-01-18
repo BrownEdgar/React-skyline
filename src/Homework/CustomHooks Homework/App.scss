@@ -1,11 +1,31 @@
-div {
+.form {
   display: flex;
-  padding: 50px;
+  flex-wrap: wrap;
   button {
+    margin: auto;
     width: 180px;
     height: 50px;
-    margin-right: 20px;
+
     font-size: 20px;
     font-weight: 700;
   }
+  div {
+    padding: 50px;
+    label {
+      font-size: 20px;
+      margin-right: 20px;
+    }
+    input {
+      width: 250px;
+      height: 50px;
+    }
+  }
+}
+.numbers {
+  margin-top: 50px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 42px;
 }
