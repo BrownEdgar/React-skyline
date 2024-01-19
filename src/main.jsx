@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import App from './Lessons/test/Test'
+import App from './Lessons/Moment/App'
 import './index.css'
 
 

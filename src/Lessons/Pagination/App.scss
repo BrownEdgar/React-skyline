@@ -1,0 +1,46 @@
+.App {
+  background-color: rgb(2, 2, 0, 0.9);
+  padding: 1em;
+  color: #fff;
+  .Posts {
+    height: 600px;
+    padding: 12px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 600px;
+    margin: 30px auto;
+    p {
+      border: 2px solid #57579c;
+      border-radius: 6px;
+      padding: 10px 0.6em;
+    }
+  }
+}
+
+.pagination {
+  width: 600px;
+  display: flex;
+  gap: 10px;
+  margin: 10px auto;
+  padding-left: 12px;
+  li {
+    padding: 10px;
+    width: 40px;
+    cursor: pointer;
+    border-radius: 6px;
+    text-align: center;
+    border: 1px solid #fff;
+    transition: 0.2s;
+    &:hover {
+      background-color: #ccc;
+      transform: translateY(-3px);
+    }
+    &.active {
+      background-color: palegreen;
+      color: purple;
+    }
+  }
+}
