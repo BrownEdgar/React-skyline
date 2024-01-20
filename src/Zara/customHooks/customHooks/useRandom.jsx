@@ -14,7 +14,7 @@ export default function useRandom(count, valu, state) {
     const currentCount = count
     const stateofstring = state
     
-    const valustring = (stateofstring)=> {
+    const valustring = ()=> {
         return ((stateofstring === "lower") ? randomstring.match(regex).slice(0,currentCount).join('').toLowerCase() : randomstring.match(regex).slice(0,currentCount).join('').toUpperCase()) 
     }
 
@@ -24,7 +24,7 @@ export default function useRandom(count, valu, state) {
 
 
     const valus = ()=> {
-          return (currentvalu == Number ? valuNumber() : valustring())
+          return (typeof currentvalu == 'number' ? valuNumber() : valustring())
     }
 
     
