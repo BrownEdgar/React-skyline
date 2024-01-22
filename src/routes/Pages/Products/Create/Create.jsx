@@ -1,6 +1,8 @@
 import React from 'react'
 import { Formik, Form, Field} from 'formik'
-
+import { nanoid } from "nanoid";
+import axios from 'axios'
+import './Create.scss'
 export default function Create() {
   const categories = [
     "Women's Shoes",
@@ -21,21 +23,28 @@ description: '',
 image: '',
   }
 
-  const handleSubmit = (v) => {
-    console.log(v);
+  const handleSubmit = (values) => {
+    const products = {
+      id: nanoid(5),
+      ...values
+    }
+    axios.post("http://localhost:3000/products", products)
+      .then(res => console.log(res))
+    .catch(err => console.log(err))
   }
-  
+  console.log(nanoid(5));
   return (
-    <div>
+    <div className='create'>
       <Formik initialValues={initialValue} onSubmit={handleSubmit}>
         <Form>
-          <div>
-            <label htmlFor="title">Title</label>
-            <Field type="text" id="title" name="title" required />
+          <div className='Title'>
+            <label htmlFor="title"></label>
+            <Field type="text" id="title" name="title" required placeholder="Name"/>
           </div>
 
-          <div>
-            <Field as="select" name="category">
+          <div className='Select' >
+            <Field as="select" name="category" className="categorys">
+              <option value="" disabled>Select category</option>
               {categories.map((category) => {
                 return (
                   <option value={category} key={category}>
@@ -46,21 +55,21 @@ image: '',
             </Field>
           </div>
 
-          <div>
-            <label htmlFor="price">Price</label>
-            <Field type="text" id="price" name="price" required />
+          <div className='Price'>
+            <label htmlFor="price"></label>
+            <Field type="text" id="price" name="price" required  placeholder='Price'/>
           </div>
 
-          <div>
-            <label htmlFor="description">Description</label>
-            <Field as="textarea" id="description" name="description" />
+          <div className='Description'>
+            <label htmlFor="description"></label>
+            <Field as="textarea" id="description" name="description" placeholder="Write description"/>
           </div>
 
-          <div>
-            <label htmlFor="image">Image</label>
-            <Field type="url" id="image" name="image" />
+          <div className='Img'>
+            <label htmlFor="image"></label>
+            <Field type="url" id="image" name="image" placeholder="image url"/>
           </div>
-          <div>
+          <div className='Submit'>
             <input type="submit" value="save product" />
           </div>
         </Form>

@@ -3,11 +3,13 @@ import FetchDataHook from "../../../customHooks/FetchDataHook";
 import { Link } from "react-router-dom";
 import ROUTES from "../../../Routes";
 import { FiPlusCircle } from "react-icons/fi";
+import { RiDeleteBin6Line } from "react-icons/ri";
 import "./products.scss"
+import axios from "axios";
 
 export default function Products() {
   const [data, error] = FetchDataHook("http://localhost:3000/products");
-  
+
   return (
     <div>
       <div className="products">
@@ -30,6 +32,18 @@ export default function Products() {
                       </div>
                     }
                   </Link>
+                  {/* <RiDeleteBin6Line
+                    className="delete"
+                    style={
+                      !window.localStorage.getItem("login")
+                        ? { display: "none" }
+                        : null
+                    }
+                    onClick={() => {
+                      axios.delete("http://localhost:3000/products", product);
+                      console.log(product);
+                    }}
+                  /> */}
                 </>
               );
             })
