@@ -1,5 +1,5 @@
 import React from "react";
-import ROUTES from "../../Routes";
+import ROUTES from "../../../Routes";
 import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import { SiNike } from "react-icons/si";

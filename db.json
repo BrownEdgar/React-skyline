@@ -1,12 +1,54 @@
 {
     "products": [
-        {
-            "id": 1,
-            "title": "Nike Dunk Low Retro",
-            "price": "$115",
-            "category": "Men's Shoes",
-            "description": "Recognizing the Dunk's roots as the top-ranking college team sneaker, the Be True To Your School pack looks to the original ad campaign for inspiration. Colors represent top-flight universities, while crisp leather has the perfect amount of sheen to make 'em a hands-down win. So lace up and show off that varsity spirit. Ya game?",
-            "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f6edde7c-6730-428b-b1ef-8dc5d7af97d7/dunk-low-retro-mens-shoes-7zsVZN.png"
-        }
-    ]
+      {
+        "id": "1",
+        "alarm": "Coming Soon",
+        "name": "NDLRM",
+        "title": "Nike Dunk Low Retro",
+        "price": "$115",
+        "category": "Men's Shoes",
+        "description": "Recognizing the Dunk's roots as the top-ranking college team sneaker, the Be True To Your School pack looks to the original ad campaign for inspiration. Colors represent top-flight universities, while crisp leather has the perfect amount of sheen to make 'em a hands-down win. So lace up and show off that varsity spirit. Ya game?",
+        "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f6edde7c-6730-428b-b1ef-8dc5d7af97d7/dunk-low-retro-mens-shoes-7zsVZN.png"
+      },
+      {
+        "id": "2",
+        "alarm": "Member Product",
+        "name": "NDL",
+        "title": "Nike Dunk Low",
+        "price": "$100",
+        "category": "Big Kids' Shoes",
+        "description": "Wear your heart on your feet in this Nike Dunk Low. Lightweight knit and corduroy pair with sweet Valentine's Day details to add a little love to every step. Still channeling the Dunk's vintage style, its padded, low-cut collar lets you take your style game anywhere in comfort. Plus, a special sticker pack lets you share the love with a solemate.?",
+        "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/d73635c3-a244-425b-b5e3-b5e49602c7a8/dunk-low-big-kids-shoes-tT2Km0.png"
+      },
+      {
+        "id": "3",
+        "alarm": "Best seller",
+        "name": "NDL",
+        "title": "Nike Dunk Low",
+        "price": "$115",
+        "category": "Women's Shoes",
+        "description": "Created for the hardwood but taken to the streets, the '80s b-ball icon returns with perfectly shined overlays and classic team colors. With its iconic hoops design, the Nike Dunk Low channels '80s vintage back onto the streets while its padded, low-cut collar lets you take your game anywhere—in comfort.",
+        "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/af53d53d-561f-450a-a483-70a7ceee380f/dunk-low-womens-shoes-4W2Z5P.png"
+      },
+      {
+        "id": "4",
+        "alarm": "Coming Soon",
+        "name": "NDL",
+        "title": "Nike Dunk Low",
+        "price": "$90",
+        "category": "Big Kids' Shoes",
+        "description": "Designed for basketball but adopted by skaters, the Nike Dunk Low helped define sneaker culture. Now this mid-'80s icon is an easy score for your closet. With ankle padding and durable rubber traction, these are a slam dunk whether you're learning to skate or getting ready for school.",
+        "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco/f2a9595e-d7b2-4b43-a146-f4b8a9d0bc70/dunk-low-big-kids-shoes-l6Jxh2.png"
+      },
+      {
+        "id": "5",
+        "alarm": "Just in",
+        "name": "AJ1HMOM",
+        "title": "Air Jordan 1 High Method of Make",
+        "price": "$155",
+        "category": "Women's Shoes",
+        "description": "Your style is iconic and your taste is next level. Show it off with the Method of Make series—limited, elevated iterations of legendary sneakers. Soft-touch textiles on the tongue and underlays give this AJ1 a tactile luxury. The unlined toe box puts an emphasis on deconstructed comfort. Take another look and you'll notice the exaggerated proportions, visually setting your J's apart from the rest. Get ready to get noticed.",
+        "image": "https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,q_auto:eco,u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/e5700856-4bfe-4282-81e1-cd5dee98b658/air-jordan-1-high-method-of-make-womens-shoes-hCCcBh.png"
+      }
+    ] 
 }

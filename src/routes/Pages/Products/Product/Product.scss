@@ -1,0 +1,65 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px auto;
+    display: inline-block;
+    .item_info{
+    display: inline-block;
+   }
+    img{
+        display: inline-block;
+        width: 30%;
+        margin: 0 250px;
+    }
+   
+    h1{
+        font-weight: 400;
+        font-size: 36px;
+        margin:0px 0px 3px 0px;
+    }
+
+    strong{
+        margin-bottom: 50px;
+        display: block;
+    }
+
+    span{
+        display: block;
+        margin: 0px 0 15px 0;
+    }
+    button{
+        display: block;
+        border: 0;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 35px 0;
+    }
+    .disabled{
+        color: black;
+        background-color: rgba(0, 0, 0, 0.119);
+        padding: 1.5em 0;
+        width: 400px;
+    }
+
+    .buy{
+        color: white;
+        background-color: black;
+        border-radius: 30px;
+        padding: 1.5em 0;
+        width: 400px;
+        cursor: pointer;
+    }
+
+    p{
+        width: 400px;
+        font-size: 16px;
+        word-spacing: 5px;
+        line-height: 28px;
+    }
+    .load{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+}

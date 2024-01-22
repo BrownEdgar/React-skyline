@@ -1,0 +1,33 @@
+.btnContainer{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    h1{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    button{
+        width: 450px;
+        padding: 1em; 
+        font-size: 18px;
+        font-weight: 800;
+        color: white;
+        background-color: royalblue;
+        cursor: pointer;
+        border: 0;
+        border-radius: 5px ;
+        margin-top: 15px;
+        &:hover{
+            background-color: red;
+        }
+    }
+   .Login__button {
+    &:hover{
+        background-color: rgb(116, 182, 17);
+        color: white;
+    }
+   }
+}
