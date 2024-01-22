@@ -43,7 +43,7 @@ image: '',
           </div>
 
           <div className='Select' >
-            <Field as="select" name="category" className="categorys">
+            <Field as="select" name="category" className="categorys" required>
               <option value="" disabled>Select category</option>
               {categories.map((category) => {
                 return (
