@@ -7,6 +7,7 @@ import ROUTES from '../routes';
 export default function Post() {
   const [post, setPost] = useState(null)
   const { postid } = useParams();
+  console.log(useParams())
 
   useEffect(() => {
     if (Math.sign(postid) === 1) {
