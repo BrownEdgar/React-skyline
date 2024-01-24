@@ -7,7 +7,7 @@ import Loader from './Loader';
 
 export default function App() {
   const [posts, setPosts] = useState([])
-  const [perpage] = useState(10);
+  const [perpage] = useState(3);
   const [page, setPage] = useState(1)
   const [loading, setLoading] = useState(false)
 
