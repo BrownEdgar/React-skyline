@@ -43,6 +43,5 @@ export default function Products() {
 
 export const productsLoader = async () => {
   const res = await axios.get("http://localhost:3000/products", {});
-  console.log(res.data);
   return res.data;
 };

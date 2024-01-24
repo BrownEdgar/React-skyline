@@ -1,0 +1,36 @@
+header {
+  width: 100%;
+  background-color: limegreen;
+  padding: 10px 40px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    .logo-box {
+      cursor: default;
+      span {
+        display: flex;
+        align-items: center;
+        font-size: 48px;
+        font-weight: 800;
+        color: whitesmoke;
+        .logo {
+          margin-right: 30px;
+          font-size: 72px;
+        }
+      }
+    }
+    .links {
+      font-size: 28px;
+      font-weight: 800;
+      color: whitesmoke;
+      display: flex;
+      align-items: center;
+      li {
+        margin-left: 20px;
+        &:hover {
+          color: rgb(220, 220, 220);
+        }
+      }
+    }
+  }
+}

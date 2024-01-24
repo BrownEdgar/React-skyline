@@ -1,36 +1,12 @@
 {
   "products": [
     {
-      "id": "1",
-      "category": "Phone",
-      "name": "iPhone 13",
-      "brand": "Apple",
-      "price": 999,
-      "img": "https://images.unsplash.com/photo-1668184162572-4d21d85d8026?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "id": "2",
-      "category": "Phone",
-      "name": "Galaxy S21",
-      "brand": "Samsung",
-      "price": 899,
-      "img": "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?q=80&w=2671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
       "id": "3",
       "category": "Laptop",
       "name": "XPS 13",
       "brand": "Dell",
       "price": 1299,
       "img": "https://www.digitaltrends.com/wp-content/uploads/2021/08/dell-xps-15-oled-2021-laptop.jpg?p=1"
-    },
-    {
-      "id": "4",
-      "category": "Laptop",
-      "name": "MacBook Air",
-      "brand": "Apple",
-      "price": 1099,
-      "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFjYm9vayUyMGFpcnxlbnwwfHwwfHx8MA%3D%3D"
     },
     {
       "id": "5",
@@ -105,28 +81,50 @@
       "img": "https://foter.com/photos/title/antique-bookcases.jpg"
     },
     {
-      "id": "bSACl",
+      "id": "Ak1SJ",
       "category": "Laptop",
       "name": "Asus Zenbook",
       "brand": "Asus",
-      "price": 1199,
-      "img": "https://images.unsplash.com/photo-1636211992838-251a43d72ad2?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "id": "zkctE",
-      "category": "Kitchen",
-      "name": "LG Microwave Neo 2.0",
-      "brand": "LG",
-      "price": 259,
+      "price": 799,
       "img": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     },
     {
-      "id": "J5e-N",
-      "category": "",
-      "name": "Hermanus Upholstered Bed Ivy",
+      "id": "ZRBap",
+      "createDate": "10:50 PM",
+      "archiveDate": "10:51 PM",
+      "category": "Furniture",
+      "name": "LG Microwave Neo 2.0",
+      "brand": "asdsad",
+      "price": 242,
+      "img": "https://assets.wfcdn.com/im/37657742/resize-h445%5Ecompr-r85/2555/255510804/Hermanus+Upholstered+Platform+Bed.jpg"
+    },
+    {
+      "id": "avy4i",
+      "createDate": "10:54 PM",
+      "archiveDate": "10:55 PM",
+      "category": "Laptop",
+      "name": "ascacaas",
       "brand": "Heramus",
-      "price": 599,
-      "img": "https://www.ikea.com/us/en/images/products/idanaes-bed-frame-dark-brown-luroey__1101606_pe866776_s5.jpg"
+      "price": 123123,
+      "img": "https://images.unsplash.com/photo-1636211992838-251a43d72ad2?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "4",
+      "category": "Laptop",
+      "name": "MacBook Air",
+      "brand": "Apple",
+      "price": 1099,
+      "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFjYm9vayUyMGFpcnxlbnwwfHwwfHx8MA%3D%3D"
+    }
+  ],
+  "archive": [
+    {
+      "id": "1",
+      "category": "Phone",
+      "name": "iPhone 13",
+      "brand": "Apple",
+      "price": 999,
+      "img": "https://images.unsplash.com/photo-1668184162572-4d21d85d8026?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }
