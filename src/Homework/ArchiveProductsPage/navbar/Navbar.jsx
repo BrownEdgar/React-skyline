@@ -18,7 +18,7 @@ export default function Navbar() {
           </div>
           <div className="links">
             <li>
-              <NavLink to={ROUTES.PRODUCTS}>Products</NavLink>
+              <NavLink to={ROUTES.PRODUCTS}>Furniture</NavLink>
             </li>
             <li>
               <NavLink to={ROUTES.ADD}>Add</NavLink>

@@ -7,7 +7,6 @@ import { FaEdit, FaTrash, FaArchive } from "react-icons/fa";
 
 export default function Products() {
   const products = useLoaderData();
-  const [currentId, setCurrentId] = useState(null);
 
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:3000/products/${id}`);
@@ -23,37 +22,37 @@ export default function Products() {
 
   return (
     <div className="Products">
-      <h1>Products</h1>
-
       <div className="Products__container">
         {products.map((product) => (
           <div className="Products__box" key={product.id}>
             <Link className="img" to={`/${product.id}`}>
               <img src={product.img} alt={product.name} />
             </Link>
-            <div className="overlay">
+            <div className="info">
               <div className="name">
-                <p className="brand">{`${product.brand}:`}</p>
-                <p className="product-name">{product.name}</p>
+                <p className="product-name">
+                  <span className="brand">{`${product.brand}:`}</span>
+                  {product.name}
+                </p>
               </div>
-              <p className="price">{product.price + "$"}</p>
+              <div className="interact">
+                <p className="price">{product.price + "$"}</p>
 
-              <button
-                className="delete-button"
-                onClick={() => {
-                  deleteProduct(product.id);
-                  setCurrentId(product.id);
-                }}
-              >
-                Delete <FaTrash className="icon-trash" />
-              </button>
-
-              <button
-                className="archive-button"
-                onClick={() => archiveProduct(product.id)}
-              >
-                Archive <FaArchive className="icon-archive" />
-              </button>
+                <button
+                  className="delete-button"
+                  onClick={() => {
+                    deleteProduct(product.id);
+                  }}
+                >
+                  Delete <FaTrash className="icon-trash" />
+                </button>
+                <button
+                  className="archive-button"
+                  onClick={() => archiveProduct(product.id)}
+                >
+                  Archive <FaArchive className="icon-archive" />
+                </button>
+              </div>
             </div>
           </div>
         ))}

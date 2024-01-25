@@ -10,7 +10,7 @@ import Products, { productsLoader } from "./pages/Products/Products";
 import Product from "./pages/Product/Product";
 import Add from "./pages/Add/Add";
 import Archived from "./pages/Archived/Archived";
-
+import "./App.scss";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -24,7 +24,7 @@ export default function App() {
   );
 
   return (
-    <div>
+    <div className="App">
       <RouterProvider router={router} />
     </div>
   );

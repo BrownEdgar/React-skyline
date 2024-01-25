@@ -1,120 +1,124 @@
 {
   "products": [
     {
-      "id": "3",
-      "category": "Laptop",
-      "name": "XPS 13",
-      "brand": "Dell",
-      "price": 1299,
-      "img": "https://www.digitaltrends.com/wp-content/uploads/2021/08/dell-xps-15-oled-2021-laptop.jpg?p=1"
+      "id": "1",
+      "category": "Table Set",
+      "name": "Modern Dining Table Set",
+      "brand": "FurniPlus",
+      "price": 999,
+      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1692435020/crusader/variants/50220012/Sawyer-Dining-Table-Square-Set_1-1692435018.jpg"
     },
     {
-      "id": "5",
-      "category": "Furniture",
-      "name": "Modern Sectional Sofa",
-      "brand": "HomePlus",
-      "price": 1499,
-      "img": "https://cdn11.bigcommerce.com/s-s8pq4kiarm/images/stencil/1280x1280/products/2078/84515/20a_MALIBUSECT_Malibu_Sectional_FE_Above_py5ec5__95047.1695330254.jpg"
-    },
-    {
-      "id": "6",
-      "category": "Furniture",
-      "name": "Wooden Coffee Table",
-      "brand": "FurniCraft",
-      "price": 299,
-      "img": "https://m.media-amazon.com/images/I/71BGa4ez1OL.jpg"
-    },
-    {
-      "id": "7",
-      "category": "Kitchen",
-      "name": "Stainless Steel Cookware Set",
-      "brand": "ChefMaster",
-      "price": 199,
-      "img": "https://assets.tramontina.com.br/upload/tramon/imagens/USA/80116055PDM001G.jpg"
-    },
-    {
-      "id": "8",
-      "category": "Kitchen",
-      "name": "Blender with Speed Control",
-      "brand": "BlendMaster",
-      "price": 79,
-      "img": "https://www.webstaurantstore.com/images/products/large/557520/2082205.jpg"
-    },
-    {
-      "id": "9",
-      "category": "Phone",
-      "name": "Pixel 6",
-      "brand": "Google",
-      "price": 799,
-      "img": "https://www.cnet.com/a/img/resize/548a4119774e055b1949d45c222a164583db4925/hub/2021/10/24/0d64fdc2-57fd-4457-86da-b32fde6c8d5a/p1018263.jpg?auto=webp&width=1200"
-    },
-    {
-      "id": "10",
-      "category": "Laptop",
-      "name": "Spectre x360",
-      "brand": "HP",
-      "price": 1199,
-      "img": "https://www.digitaltrends.com/wp-content/uploads/2020/12/hp-spectre-1.jpg?p=1"
-    },
-    {
-      "id": "11",
-      "category": "Furniture",
-      "name": "Leather Recliner Chair",
+      "id": "2",
+      "category": "Sofa",
+      "name": "Luxury Leather Sofa",
       "brand": "ComfortLiving",
-      "price": 799,
-      "img": "https://assets.wfcdn.com/im/78972270/resize-h445%5Ecompr-r85/1313/131360048/Faux+Leather+Reclining+Heated+Massage+Chair.jpg"
+      "price": 5299,
+      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1691572417/crusader/variants/AS-000390-LE4016/Jonathan-Leather-Extended-Side-Left-Chaise-Sectional-Caramel-Square-Set_2-1691572414.jpg"
     },
     {
-      "id": "12",
-      "category": "Kitchen",
-      "name": "Non-Stick Cookware Set",
-      "brand": "MasterChef",
-      "price": 149,
-      "img": "https://www.thespruceeats.com/thmb/STR2mY-omAhcuhnTZ8VOC21qxTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Web_1500-SPRE-GroupShot-MFS-128-05f141feb1634128a33b2cd837df1e0a.jpg"
-    },
-    {
-      "id": "13",
-      "category": "Furniture",
-      "name": "Vintage Wooden Bookshelf",
-      "brand": "RetroDesigns",
-      "price": 499,
-      "img": "https://foter.com/photos/title/antique-bookcases.jpg"
-    },
-    {
-      "id": "Ak1SJ",
-      "category": "Laptop",
-      "name": "Asus Zenbook",
-      "brand": "Asus",
-      "price": 799,
-      "img": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    },
-    {
-      "id": "ZRBap",
-      "createDate": "10:50 PM",
-      "archiveDate": "10:51 PM",
-      "category": "Furniture",
-      "name": "LG Microwave Neo 2.0",
-      "brand": "asdsad",
-      "price": 242,
-      "img": "https://assets.wfcdn.com/im/37657742/resize-h445%5Ecompr-r85/2555/255510804/Hermanus+Upholstered+Platform+Bed.jpg"
-    },
-    {
-      "id": "avy4i",
-      "createDate": "10:54 PM",
-      "archiveDate": "10:55 PM",
-      "category": "Laptop",
-      "name": "ascacaas",
-      "brand": "Heramus",
-      "price": 123123,
-      "img": "https://images.unsplash.com/photo-1636211992838-251a43d72ad2?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "id": "3",
+      "category": "Bed",
+      "name": "King Size Wooden Bed",
+      "brand": "DreamSleep",
+      "price": 1999,
+      "img": "https://www.sierralivingconcepts.com/images/thumbs/0412960_pecos-mission-solid-wood-platform-bed-frame.jpeg"
     },
     {
       "id": "4",
-      "category": "Laptop",
-      "name": "MacBook Air",
-      "brand": "Apple",
-      "price": 1099,
-      "img": "https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=700&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8bWFjYm9vayUyMGFpcnxlbnwwfHwwfHx8MA%3D%3D"
+      "category": "Storage",
+      "name": "Modern Storage Cabinet",
+      "brand": "OrganizeMaster",
+      "price": 1699,
+      "img": "https://assets.wfcdn.com/im/18160349/resize-w750%5Ecompr-r85/2312/231211478/Rushawn+Large+Amroire.jpg"
+    },
+    {
+      "id": "5",
+      "category": "Dresser",
+      "name": "Vintage Dresser",
+      "brand": "RetroDesigns",
+      "price": 499,
+      "img": "https://ashleyfurniture.scene7.com/is/image/AshleyFurniture/B553-131-36-SW-P2-KO?$AFHS-PDP-Zoomed$"
+    },
+    {
+      "id": "6",
+      "category": "Table Set",
+      "name": "Round Glass Dining Table",
+      "brand": "ElegantDine",
+      "price": 699,
+      "img": "https://www.zurifurniture.com/common/images/products/large/enzo_extension_dining_table_above_3.jpg"
+    },
+    {
+      "id": "7",
+      "category": "Sofa",
+      "name": "Cozy Fabric Sofa",
+      "brand": "SoftTouch",
+      "price": 3899,
+      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1642126670/crusader/variants/50440761-MC4002/Hamilton-Left-Sectional-Sofa-Brilliant-White-Square-Set_4.jpg"
+    },
+    {
+      "id": "8",
+      "category": "Bed",
+      "name": "Queen Size Upholstered Bed",
+      "brand": "SleepWell",
+      "price": 1849,
+      "img": "https://www.zurifurniture.com/common/images/products/main/Hera_Black_Leather_Bed_lifestyle_MAIN.jpg"
+    },
+    {
+      "id": "9",
+      "category": "Storage",
+      "name": "Wooden Bookshelf",
+      "brand": "BookCraft",
+      "price": 999,
+      "img": "https://www.zurifurniture.com/common/images/products/large/Hayes_Storage_Unit_Mahogany_Lifestyle_MAIN.jpg"
+    },
+    {
+      "id": "10",
+      "category": "Dresser",
+      "name": "Classic Wooden Dresser",
+      "brand": "HeritageDesign",
+      "price": 649,
+      "img": "https://www.zurifurniture.com/common/images/products/large/Henley_Accent_Chest_Black_lifestyle_MAIN_new.jpg"
+    },
+    {
+      "id": "11",
+      "category": "Table Set",
+      "name": "Compact Bistro Table Set",
+      "brand": "UrbanLiving",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "12",
+      "category": "Sofa",
+      "name": "Leather Reclining Sofa",
+      "brand": "RelaxMaster",
+      "price": 2199,
+      "img": "https://m.media-amazon.com/images/I/A1pWIJqG7yL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "13",
+      "category": "Bed",
+      "name": "Platform Storage Bed",
+      "brand": "SpaceSaver",
+      "price": 1649,
+      "img": "https://i02.hsncdn.com/is/image/HomeShoppingNetwork/rocs1200/tristan-1-drawer-queen-size-platform-storage-bed-with-s-d-20210212111347923~9903638w.jpg"
+    },
+    {
+      "id": "14",
+      "category": "Storage",
+      "name": "Metal Storage Rack",
+      "brand": "SturdyRack",
+      "price": 179,
+      "img": "https://m.media-amazon.com/images/I/51hdFbY7WQL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
+    },
+    {
+      "id": "15",
+      "category": "Dresser",
+      "name": "Mirrored Dresser",
+      "brand": "GlamourCraft",
+      "price": 599,
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY"
     }
   ],
   "archive": [

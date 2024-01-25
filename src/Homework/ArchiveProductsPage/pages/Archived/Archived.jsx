@@ -30,12 +30,12 @@ export default function Archived() {
   }, []); // Empty dependency array ensures useEffect runs once on mount
 
   return (
-    <div className="Products">
+    <div className="Archive">
       <h1>Archived Products</h1>
 
-      <div className="Products__container">
+      <div className="Archive__container">
         {products.map((product) => (
-          <div className="Products__box" key={product.id}>
+          <div className="Archive__box" key={product.id}>
             <Link className="img" to={`/${product.id}`}>
               <img src={product.img} alt={product.name} />
             </Link>

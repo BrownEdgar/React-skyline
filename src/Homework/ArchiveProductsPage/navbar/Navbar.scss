@@ -2,6 +2,10 @@ header {
   width: 100%;
   background-color: limegreen;
   padding: 10px 40px;
+  position: fixed; // Make the header fixed
+  top: 0; // Position it at the top of the screen
+  z-index: 1000;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
   ul {
     display: flex;
     justify-content: space-between;
@@ -12,7 +16,7 @@ header {
         align-items: center;
         font-size: 48px;
         font-weight: 800;
-        color: whitesmoke;
+        color: white;
         .logo {
           margin-right: 30px;
           font-size: 72px;
@@ -22,13 +26,18 @@ header {
     .links {
       font-size: 28px;
       font-weight: 800;
-      color: whitesmoke;
+      color: white;
       display: flex;
       align-items: center;
       li {
         margin-left: 20px;
         &:hover {
           color: rgb(220, 220, 220);
+        }
+        .active {
+          padding: 5px 20px;
+          border-bottom: 2px solid white;
+          border-radius: 10px;
         }
       }
     }
