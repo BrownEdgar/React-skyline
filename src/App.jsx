@@ -1,12 +1,31 @@
 import React from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearList, pushUser } from './features/usersSlice/usersSlice';
+import COunter from './components/COunter';
 
 export default function App() {
-  const state = useSelector(state => state.users);
-  console.log(state)
+  const users = useSelector(state => state.users);
+  const dispatch = useDispatch()
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(pushUser(e.target.elements[0].value))
+  }
+
   return (
     <div>
       <h1>hello redux</h1>
+      <COunter />
+      <form onSubmit={handleSubmit}>
+        <input type="text" placeholder='username' />
+        <input type="submit" value="save" />
+      </form>
+      <pre>
+        {JSON.stringify(users, null, 1)}
+      </pre>
+
+      <button onClick={() => dispatch(clearList())}>Clear list </button>
+
     </div>
   )
 }
