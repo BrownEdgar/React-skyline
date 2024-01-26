@@ -39,7 +39,7 @@ export default function Archived() {
     };
 
     fetchData();
-  }, []);
+  }, [products]);
 
   return (
     <div className="Archive">
