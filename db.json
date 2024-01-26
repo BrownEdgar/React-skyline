@@ -9,20 +9,132 @@
       "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1692435020/crusader/variants/50220012/Sawyer-Dining-Table-Square-Set_1-1692435018.jpg"
     },
     {
-      "id": "2",
-      "category": "Sofa",
-      "name": "Luxury Leather Sofa",
-      "brand": "ComfortLiving",
-      "price": 5299,
-      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1691572417/crusader/variants/AS-000390-LE4016/Jonathan-Leather-Extended-Side-Left-Chaise-Sectional-Caramel-Square-Set_2-1691572414.jpg"
+      "id": "15",
+      "category": "Dresser",
+      "name": "Mirrored Dresser",
+      "brand": "GlamourCraft",
+      "price": 599,
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY"
     },
     {
-      "id": "3",
+      "id": "16",
+      "category": "Table Set",
+      "name": "Rustic Farmhouse Dining Set",
+      "brand": "CountryLiving",
+      "price": 799,
+      "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg"
+    },
+    {
+      "id": "17",
+      "category": "Sofa",
+      "name": "Linen Upholstered Sofa",
+      "brand": "CozyHome",
+      "price": 2899,
+      "img": "https://m.media-amazon.com/images/I/91HsNPXsGYL.jpg"
+    },
+    {
+      "id": "18",
       "category": "Bed",
-      "name": "King Size Wooden Bed",
-      "brand": "DreamSleep",
-      "price": 1999,
-      "img": "https://www.sierralivingconcepts.com/images/thumbs/0412960_pecos-mission-solid-wood-platform-bed-frame.jpeg"
+      "name": "Contemporary Platform Bed",
+      "brand": "UrbanStyle",
+      "price": 1799,
+      "img": "https://www.modernmiami.com/media/catalog/product/cache/6d4faa98f2b48c05dae02148ead85f2f/o/p/opal1.jpeg"
+    },
+    {
+      "id": "19",
+      "category": "Storage",
+      "name": "Industrial Storage Cabinet",
+      "brand": "UrbanTrends",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/71vvtNbCSfL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "20",
+      "category": "Dresser",
+      "name": "Modern Mirrored Dresser",
+      "brand": "ChicDesigns",
+      "price": 899,
+      "img": "https://astarfurn.com/cdn/shop/products/products_coaster_color_robyn--181734809_205133_4-b1.jpg?v=1553545339"
+    },
+    {
+      "id": "21",
+      "category": "Table Set",
+      "name": "Elegant Marble Dining Set",
+      "brand": "LuxuryLiving",
+      "price": 1699,
+      "img": "https://i.ebayimg.com/images/g/B2AAAOSwSZBi2auh/s-l1200.webp"
+    },
+    {
+      "id": "22",
+      "category": "Sofa",
+      "name": "Velvet Tufted Chesterfield Sofa",
+      "brand": "VintageVibes",
+      "price": 2599,
+      "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/0f05b237b0b53ad686a56e61a4af484110d85ef3/Morgan-Velvet-Tufted-Scroll-Arm-Chesterfield-5-Seat-Curved-Sofa-by-iNSPIRE-Q-Bold.jpg"
+    },
+    {
+      "id": "23",
+      "category": "Bed",
+      "name": "Canopy Four-Poster Bed",
+      "brand": "RoyalComfort",
+      "price": 6999,
+      "img": "https://media.designcafe.com/wp-content/uploads/2020/09/11115358/four-poster-bed.jpg"
+    },
+    {
+      "id": "24",
+      "category": "Storage",
+      "name": "Chest of Drawers",
+      "brand": "AntiqueTreasures",
+      "price": 1099,
+      "img": "https://i5.walmartimages.com/seo/GIKPAL-10-Drawer-Dresser-Chest-of-Drawers-for-Bedroom-Fabric-Dressers-with-Side-Pockets-and-Hooks-Brown_5a479066-576f-4b0c-a998-bb1f01184950.985c1ff72969184e1a6de01f789f49fc.jpeg"
+    },
+    {
+      "id": "25",
+      "category": "Dresser",
+      "name": "French Provincial Dresser",
+      "brand": "ElegantDesigns",
+      "price": 1499,
+      "img": "https://images.squarespace-cdn.com/content/v1/6143ee0b6587843ad205c9db/88b9ff65-6d99-4e89-8f66-011ff27b706c/IMG_6474.JPG"
+    },
+    {
+      "id": "26",
+      "category": "Table Set",
+      "name": "Contemporary Glass Coffee Table",
+      "brand": "ModernLiving",
+      "price": 799,
+      "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/b34a0d5e4694b6f2525a733539aee4ff05d70a51/Glass-Dining-Table-with-Glass-Tabletop-and-Metal-Legs.jpg"
+    },
+    {
+      "id": "27",
+      "category": "Sofa",
+      "name": "Leather Sleeper Sofa",
+      "brand": "UrbanComfort",
+      "price": 1899,
+      "img": "https://cdn.homefurn.com/thumbs/0048527_genoa-leather-queen-sleeper-sofa-gray.jpeg"
+    },
+    {
+      "id": "28",
+      "category": "Bed",
+      "name": "Luxurious Upholstered Bed",
+      "brand": "OpulentBeds",
+      "price": 3499,
+      "img": "https://images.squarespace-cdn.com/content/v1/5b11eabaa2772c11e194a936/1570749231895-F4DNQTRZO42DHYUN1OXC/Grey+Tufted+Bed.jpg"
+    },
+    {
+      "id": "29",
+      "category": "Storage",
+      "name": "Rustic Wooden Sideboard",
+      "brand": "FarmhouseFinds",
+      "price": 999,
+      "img": "https://www.sierralivingconcepts.com/images/thumbs/0393812_willshire-rustic-solid-wood-3-drawer-large-sideboard-cabinet.jpeg"
+    },
+    {
+      "id": "30",
+      "category": "Dresser",
+      "name": "Minimalist Wooden Dresser",
+      "brand": "SimpleDesigns",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/71KYrNbTwxL.jpg"
     },
     {
       "id": "4",
@@ -65,6 +177,14 @@
       "img": "https://www.zurifurniture.com/common/images/products/main/Hera_Black_Leather_Bed_lifestyle_MAIN.jpg"
     },
     {
+      "id": "2",
+      "category": "Sofa",
+      "name": "Luxury Leather Sofa",
+      "brand": "ComfortLiving",
+      "price": 5299,
+      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1691572417/crusader/variants/AS-000390-LE4016/Jonathan-Leather-Extended-Side-Left-Chaise-Sectional-Caramel-Square-Set_2-1691572414.jpg"
+    },
+    {
       "id": "9",
       "category": "Storage",
       "name": "Wooden Bookshelf",
@@ -81,14 +201,6 @@
       "img": "https://www.zurifurniture.com/common/images/products/large/Henley_Accent_Chest_Black_lifestyle_MAIN_new.jpg"
     },
     {
-      "id": "11",
-      "category": "Table Set",
-      "name": "Compact Bistro Table Set",
-      "brand": "UrbanLiving",
-      "price": 899,
-      "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg"
-    },
-    {
       "id": "12",
       "category": "Sofa",
       "name": "Leather Reclining Sofa",
@@ -103,6 +215,24 @@
       "brand": "SpaceSaver",
       "price": 1649,
       "img": "https://i02.hsncdn.com/is/image/HomeShoppingNetwork/rocs1200/tristan-1-drawer-queen-size-platform-storage-bed-with-s-d-20210212111347923~9903638w.jpg"
+    }
+  ],
+  "archive": [
+    {
+      "id": "11",
+      "category": "Table Set",
+      "name": "Compact Bistro Table Set",
+      "brand": "UrbanLiving",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "3",
+      "category": "Bed",
+      "name": "King Size Wooden Bed",
+      "brand": "DreamSleep",
+      "price": 1999,
+      "img": "https://www.sierralivingconcepts.com/images/thumbs/0412960_pecos-mission-solid-wood-platform-bed-frame.jpeg"
     },
     {
       "id": "14",
@@ -110,25 +240,7 @@
       "name": "Metal Storage Rack",
       "brand": "SturdyRack",
       "price": 179,
-      "img": "https://m.media-amazon.com/images/I/51hdFbY7WQL.__AC_SX300_SY300_QL70_FMwebp_.jpg"
-    },
-    {
-      "id": "15",
-      "category": "Dresser",
-      "name": "Mirrored Dresser",
-      "brand": "GlamourCraft",
-      "price": 599,
-      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY"
-    }
-  ],
-  "archive": [
-    {
-      "id": "1",
-      "category": "Phone",
-      "name": "iPhone 13",
-      "brand": "Apple",
-      "price": 999,
-      "img": "https://images.unsplash.com/photo-1668184162572-4d21d85d8026?q=80&w=2600&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "img": "https://m.media-amazon.com/images/I/51f64ek-yNL._AC_SX679_.jpg"
     }
   ]
 }

@@ -20,13 +20,11 @@ export default function Add() {
   };
 
   const handleSubmit = (values, formik) => {
-    const currentDate = moment();
-    const archiveDate = currentDate.clone().add(1, "minute");
+    const currentDate = moment().format("lll");
 
     const products = {
-      id: nanoid(5),
-      createDate: currentDate.format("LT"),
-      archiveDate: archiveDate.format("LT"),
+      id: nanoid(3),
+      createDate: currentDate,
       ...values,
     };
     axios
@@ -42,7 +40,7 @@ export default function Add() {
 
   return (
     <div className="Add">
-      <h1>Add Products</h1>
+      <h1>Add Furniture</h1>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className="form">
           <div className="left">

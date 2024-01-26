@@ -2,11 +2,12 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Archived.scss";
 import axios from "axios";
-import { FaTrash, FaArchive } from "react-icons/fa";
+import { FaTrash } from "react-icons/fa";
+
+import { VscTriangleLeft } from "react-icons/vsc";
 
 export default function Archived() {
   const [products, setProducts] = useState([]);
-  const [currentId, setCurrentId] = useState(null);
 
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:3000/archive/${id}`);
@@ -27,11 +28,11 @@ export default function Archived() {
     };
 
     fetchData();
-  }, []); // Empty dependency array ensures useEffect runs once on mount
+  }, [products]);
 
   return (
     <div className="Archive">
-      <h1>Archived Products</h1>
+      <h1>Archived Inventory</h1>
 
       <div className="Archive__container">
         {products.map((product) => (
@@ -39,29 +40,34 @@ export default function Archived() {
             <Link className="img" to={`/${product.id}`}>
               <img src={product.img} alt={product.name} />
             </Link>
-            <div className="overlay">
+            <div className="info">
               <div className="name">
-                <p className="brand">{`${product.brand}:`}</p>
-                <p className="product-name">{product.name}</p>
+                <p className="product-name">
+                  <span className="brand">{`${product.brand}:`}</span>
+                  {product.name.length > 30
+                    ? `${product.name.slice(0, 30)}...`
+                    : product.name}
+                </p>
               </div>
-              <p className="price">{product.price + "$"}</p>
-
-              <button
-                className="delete-button"
-                onClick={() => {
-                  deleteProduct(product.id);
-                  setCurrentId(product.id);
-                }}
-              >
-                Delete <FaTrash className="icon-trash" />
-              </button>
-
-              <button
-                className="archive-button"
-                onClick={() => archiveProduct(product.id)}
-              >
-                Archive <FaArchive className="icon-archive" />
-              </button>
+              <div className="interact">
+                <p className="price">{product.price + "$"}</p>
+                <div className="buttons">
+                  <button
+                    className="delete-button"
+                    onClick={() => {
+                      deleteProduct(product.id);
+                    }}
+                  >
+                    Delete <FaTrash className="icon-trash" />
+                  </button>
+                  <button
+                    className="archive-button"
+                    onClick={() => archiveProduct(product.id)}
+                  >
+                    <VscTriangleLeft className="icon-archive" /> Send Back
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
         ))}

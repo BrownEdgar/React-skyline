@@ -1,19 +1,27 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins&display=swap");
 .App {
+  min-height: 100vh;
   padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
+  font-family: "Poppins", sans-serif;
 }
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 12px;
+  border: 1px black;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(0, 170, 0);
+  background: rgb(0, 120, 0);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: limegreen;
+  background: rgb(42, 190, 42);
 }
 
 /* Handle on hover */

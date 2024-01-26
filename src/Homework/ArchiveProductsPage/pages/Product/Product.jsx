@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./Product.scss";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axios from "axios";
+import { IoArrowBackCircleSharp } from "react-icons/io5";
+import ROUTES from "../../routes";
 
 export default function Product() {
   const { productId } = useParams();
@@ -18,7 +20,10 @@ export default function Product() {
   return (
     <div className="Product">
       <div className="Product__box">
-        <img src={product.img} alt={product.name} />
+        <img className="product-img" src={product.img} alt={product.name} />
+        <Link className="go-back" to={ROUTES.PRODUCTS}>
+          <IoArrowBackCircleSharp />
+        </Link>
         <div className="info">
           <div className="title">
             <p>Brand:</p>
@@ -30,7 +35,9 @@ export default function Product() {
             <p>{product.brand}</p>
             <p>{product.name}</p>
             <p>{product.category}</p>
-            <p>{product.price}</p>
+            <i>
+              <p>{`${product.price}$`}</p>
+            </i>
           </div>
         </div>
       </div>

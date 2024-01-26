@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Poppins&display=swap");
 header {
   width: 100%;
   background-color: limegreen;
   padding: 10px 40px;
-  position: fixed; // Make the header fixed
-  top: 0; // Position it at the top of the screen
+  position: fixed;
+  top: 0;
   z-index: 1000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 5px;
+  font-family: "Poppins", sans-serif;
+
   ul {
     display: flex;
     justify-content: space-between;
@@ -39,6 +43,18 @@ header {
           border-bottom: 2px solid white;
           border-radius: 10px;
         }
+      }
+    }
+    button {
+      background: none;
+      border: none;
+      outline: none;
+      color: white;
+      font-size: 28px;
+      font-weight: 600;
+      cursor: pointer;
+      &:hover {
+        color: rgb(220, 220, 220);
       }
     }
   }

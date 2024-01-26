@@ -3,6 +3,7 @@ const ROUTES = {
   PRODUCT: `:productId`,
   ADD: `add`,
   ARCHIVE: `archive`,
+  LOGIN: `login`,
   ERROR: `*`,
 };
 
