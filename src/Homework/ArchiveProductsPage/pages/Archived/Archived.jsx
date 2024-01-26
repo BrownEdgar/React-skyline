@@ -5,9 +5,12 @@ import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 
 import { VscTriangleLeft } from "react-icons/vsc";
+import Pagination from "../../Pagination/Pagination";
 
 export default function Archived() {
   const [products, setProducts] = useState([]);
+  const [page, setPage] = useState(1);
+  const [perPage] = useState(8);
 
   const deleteProduct = (id) => {
     axios.delete(`http://localhost:3000/archive/${id}`);
@@ -21,6 +24,14 @@ export default function Archived() {
     console.log(`Product with ID ${id} archived and deleted.`);
   };
 
+  const itemsCount = page * perPage;
+
+  const currentItems = products.slice(itemsCount - perPage, itemsCount);
+
+  const changePage = (n) => {
+    setPage(n);
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       const res = await axios.get("http://localhost:3000/archive", {});
@@ -28,50 +39,60 @@ export default function Archived() {
     };
 
     fetchData();
-  }, [products]);
+  }, []);
 
   return (
     <div className="Archive">
       <h1>Archived Inventory</h1>
-
       <div className="Archive__container">
-        {products.map((product) => (
-          <div className="Archive__box" key={product.id}>
-            <Link className="img" to={`/${product.id}`}>
-              <img src={product.img} alt={product.name} />
-            </Link>
-            <div className="info">
-              <div className="name">
-                <p className="product-name">
-                  <span className="brand">{`${product.brand}:`}</span>
-                  {product.name.length > 30
-                    ? `${product.name.slice(0, 30)}...`
-                    : product.name}
-                </p>
-              </div>
-              <div className="interact">
-                <p className="price">{product.price + "$"}</p>
-                <div className="buttons">
-                  <button
-                    className="delete-button"
-                    onClick={() => {
-                      deleteProduct(product.id);
-                    }}
-                  >
-                    Delete <FaTrash className="icon-trash" />
-                  </button>
-                  <button
-                    className="archive-button"
-                    onClick={() => archiveProduct(product.id)}
-                  >
-                    <VscTriangleLeft className="icon-archive" /> Send Back
-                  </button>
+        {products.length > 0 ? (
+          currentItems.map((product) => (
+            <div className="Archive__box" key={product.id}>
+              <Link className="img" to={`/${product.id}`}>
+                <img src={product.img} alt={product.name} />
+              </Link>
+              <div className="info">
+                <div className="name">
+                  <p className="product-name">
+                    <span className="brand">{`${product.brand}:`}</span>
+                    {product.name.length > 30
+                      ? `${product.name.slice(0, 30)}...`
+                      : product.name}
+                  </p>
+                </div>
+                <div className="interact">
+                  <p className="price">{product.price + "$"}</p>
+                  <div className="buttons">
+                    <button
+                      className="delete-button"
+                      onClick={() => {
+                        deleteProduct(product.id);
+                      }}
+                    >
+                      Delete <FaTrash className="icon-trash" />
+                    </button>
+                    <button
+                      className="archive-button"
+                      onClick={() => archiveProduct(product.id)}
+                    >
+                      <VscTriangleLeft className="icon-archive" /> Send Back
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))
+        ) : (
+          <h3>No Archived Furniture</h3>
+        )}
       </div>
+      {products.length > perPage && currentItems.length > 0 && (
+        <Pagination
+          pages={perPage}
+          total={products.length}
+          changePage={changePage}
+        />
+      )}
     </div>
   );
 }

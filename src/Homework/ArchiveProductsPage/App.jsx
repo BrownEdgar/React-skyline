@@ -13,6 +13,7 @@ import Archived from "./pages/Archived/Archived";
 import "./App.scss";
 import Login from "./pages/Login/Login";
 import PrivateRoute from "./Private/PrivateRoute";
+import Edit from "./pages/Edit/Edit";
 export default function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
@@ -22,8 +23,11 @@ export default function App() {
         <Route element={<PrivateRoute />}>
           <Route path={ROUTES.ARCHIVE} element={<Archived />} />
           <Route path={ROUTES.ADD} element={<Add />} />
+          <Route path={ROUTES.EDIT} element={<Edit />} />
         </Route>
         <Route path={ROUTES.LOGIN} element={<Login />} />
+
+        <Route path={ROUTES.ERROR} element={<Error />} />
       </Route>
     )
   );

@@ -8,6 +8,7 @@ import ROUTES from "../../routes";
 export default function Product() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
+  console.log(productId);
 
   useEffect(() => {
     if (productId) {
@@ -24,6 +25,10 @@ export default function Product() {
         <Link className="go-back" to={ROUTES.PRODUCTS}>
           <IoArrowBackCircleSharp />
         </Link>
+        <Link className="edit" to={`/${ROUTES.EDIT}/${productId}`}>
+          Edit
+        </Link>
+
         <div className="info">
           <div className="title">
             <p>Brand:</p>

@@ -1,0 +1,20 @@
+.pagination {
+  display: flex;
+
+  justify-content: space-between;
+  margin-bottom: 20px;
+  li {
+    cursor: pointer;
+    width: 40px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background-color: limegreen;
+    color: white;
+    font-size: 18px;
+    margin: auto 10px;
+    &:hover {
+      background-color: green;
+    }
+  }
+}

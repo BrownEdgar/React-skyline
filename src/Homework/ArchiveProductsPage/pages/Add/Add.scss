@@ -1,5 +1,12 @@
 .Add {
   padding-top: 30px;
+  h1 {
+    font-size: 36px;
+    font-weight: 800;
+    color: limegreen;
+    text-align: center;
+    margin: 40px auto 8%;
+  }
   .form {
     display: flex;
     flex-wrap: wrap;
@@ -23,7 +30,7 @@
     .left,
     .right {
       width: 50%;
-      color: wheat;
+      color: limegreen;
       font-size: 32px;
       font-weight: 900;
       display: flex;
@@ -35,24 +42,23 @@
           width: 250px;
         }
         input {
-          height: 35px;
-          width: 300px;
-          background-color: rgb(93, 93, 93);
+          height: 50px;
+          width: 400px;
+          background-color: lightgreen;
           padding: 5px 20px;
-          font-size: 20px;
+          font-size: 24px;
           color: white;
           border: 0;
           outline: 0;
           border-radius: 4px;
         }
         select {
-          height: 35px;
-          width: 300px;
-          background-color: rgb(93, 93, 93);
+          height: 50px;
+          width: 400px;
           padding: 5px 20px;
-          font-size: 20px;
-          color: white;
-          border: 0;
+          font-size: 24px;
+
+          border: 2px solid limegreen;
           outline: 0;
           border-radius: 4px;
           appearance: none;

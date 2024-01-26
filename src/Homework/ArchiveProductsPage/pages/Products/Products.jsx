@@ -3,8 +3,11 @@ import { Link } from "react-router-dom";
 import "./Products.scss";
 import axios from "axios";
 import { FaTrash, FaArchive } from "react-icons/fa";
+import Pagination from "../../Pagination/Pagination";
 
 export default function Products() {
+  const [page, setPage] = useState(1);
+  const [perPage] = useState(8);
   const [products, setProducts] = useState([]);
   const [isLogin] = useState(Boolean(window.localStorage.getItem("login")));
   const containerClass = isLogin
@@ -27,6 +30,14 @@ export default function Products() {
     } catch (error) {
       console.error("Error fetching products:", error);
     }
+  };
+  console.log(products.length);
+  const itemsCount = page * perPage;
+
+  const currentItems = products.slice(itemsCount - perPage, itemsCount);
+
+  const changePage = (n) => {
+    setPage(n);
   };
 
   const deleteProduct = async (id) => {
@@ -53,7 +64,7 @@ export default function Products() {
   return (
     <div className="Products">
       <div className={containerClass}>
-        {products.map((product) => (
+        {currentItems.map((product) => (
           <div className="Products__box" key={product.id}>
             <Link className="img" to={`/${product.id}`}>
               <img src={product.img} alt={product.name} />
@@ -92,6 +103,13 @@ export default function Products() {
           </div>
         ))}
       </div>
+      {products.length > perPage && currentItems.length > 0 && (
+        <Pagination
+          pages={perPage}
+          total={products.length}
+          changePage={changePage}
+        />
+      )}
       {!isLogin && (
         <div className="overlay">
           <p>Please Log in as Admin to view products</p>

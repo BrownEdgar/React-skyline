@@ -6,9 +6,12 @@
   align-items: center;
   justify-content: center;
   -webkit-user-select: none;
-  h1 {
+  h1,
+  h3 {
     color: limegreen;
+    text-align: center;
   }
+
   &__container {
     padding: 35px;
     display: grid;
@@ -22,7 +25,7 @@
   &__box {
     margin-bottom: 30px;
 
-    height: 400px;
+    height: 420px;
     transition: 0.25s ease-in-out;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     display: flex;

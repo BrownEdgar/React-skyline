@@ -9,53 +9,31 @@
       "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1692435020/crusader/variants/50220012/Sawyer-Dining-Table-Square-Set_1-1692435018.jpg"
     },
     {
-      "id": "15",
-      "category": "Dresser",
-      "name": "Mirrored Dresser",
       "brand": "GlamourCraft",
-      "price": 599,
-      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY"
-    },
-    {
-      "id": "16",
-      "category": "Table Set",
-      "name": "Rustic Farmhouse Dining Set",
-      "brand": "CountryLiving",
-      "price": 799,
-      "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg"
+      "name": "Mirrored Dresser",
+      "category": "Dresser",
+      "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY",
+      "price": 579,
+      "id": "15"
     },
     {
       "id": "17",
-      "category": "Sofa",
-      "name": "Linen Upholstered Sofa",
       "brand": "CozyHome",
-      "price": 2899,
-      "img": "https://m.media-amazon.com/images/I/91HsNPXsGYL.jpg"
+      "name": "Linen Upholstered Sofa",
+      "category": "Sofa",
+      "img": "https://m.media-amazon.com/images/I/91HsNPXsGYL.jpg",
+      "price": 2999
     },
     {
-      "id": "18",
+      "id": "23",
       "category": "Bed",
-      "name": "Contemporary Platform Bed",
-      "brand": "UrbanStyle",
-      "price": 1799,
-      "img": "https://www.modernmiami.com/media/catalog/product/cache/6d4faa98f2b48c05dae02148ead85f2f/o/p/opal1.jpeg"
-    },
-    {
-      "id": "19",
-      "category": "Storage",
-      "name": "Industrial Storage Cabinet",
-      "brand": "UrbanTrends",
-      "price": 699,
-      "img": "https://m.media-amazon.com/images/I/71vvtNbCSfL._AC_UF894,1000_QL80_.jpg"
-    },
-    {
-      "id": "20",
-      "category": "Dresser",
-      "name": "Modern Mirrored Dresser",
-      "brand": "ChicDesigns",
-      "price": 899,
-      "img": "https://astarfurn.com/cdn/shop/products/products_coaster_color_robyn--181734809_205133_4-b1.jpg?v=1553545339"
-    },
+      "name": "Canopy Four-Poster Bed",
+      "brand": "RoyalComfort",
+      "price": 6999,
+      "img": "https://media.designcafe.com/wp-content/uploads/2020/09/11115358/four-poster-bed.jpg"
+    }
+  ],
+  "archive": [
     {
       "id": "21",
       "category": "Table Set",
@@ -71,30 +49,6 @@
       "brand": "VintageVibes",
       "price": 2599,
       "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/0f05b237b0b53ad686a56e61a4af484110d85ef3/Morgan-Velvet-Tufted-Scroll-Arm-Chesterfield-5-Seat-Curved-Sofa-by-iNSPIRE-Q-Bold.jpg"
-    },
-    {
-      "id": "23",
-      "category": "Bed",
-      "name": "Canopy Four-Poster Bed",
-      "brand": "RoyalComfort",
-      "price": 6999,
-      "img": "https://media.designcafe.com/wp-content/uploads/2020/09/11115358/four-poster-bed.jpg"
-    },
-    {
-      "id": "24",
-      "category": "Storage",
-      "name": "Chest of Drawers",
-      "brand": "AntiqueTreasures",
-      "price": 1099,
-      "img": "https://i5.walmartimages.com/seo/GIKPAL-10-Drawer-Dresser-Chest-of-Drawers-for-Bedroom-Fabric-Dressers-with-Side-Pockets-and-Hooks-Brown_5a479066-576f-4b0c-a998-bb1f01184950.985c1ff72969184e1a6de01f789f49fc.jpeg"
-    },
-    {
-      "id": "25",
-      "category": "Dresser",
-      "name": "French Provincial Dresser",
-      "brand": "ElegantDesigns",
-      "price": 1499,
-      "img": "https://images.squarespace-cdn.com/content/v1/6143ee0b6587843ad205c9db/88b9ff65-6d99-4e89-8f66-011ff27b706c/IMG_6474.JPG"
     },
     {
       "id": "26",
@@ -119,6 +73,46 @@
       "brand": "OpulentBeds",
       "price": 3499,
       "img": "https://images.squarespace-cdn.com/content/v1/5b11eabaa2772c11e194a936/1570749231895-F4DNQTRZO42DHYUN1OXC/Grey+Tufted+Bed.jpg"
+    },
+    {
+      "id": "18",
+      "category": "Bed",
+      "name": "Contemporary Platform Bed",
+      "brand": "UrbanStyle",
+      "price": 1799,
+      "img": "https://www.modernmiami.com/media/catalog/product/cache/6d4faa98f2b48c05dae02148ead85f2f/o/p/opal1.jpeg"
+    },
+    {
+      "id": "19",
+      "category": "Storage",
+      "name": "Industrial Storage Cabinet",
+      "brand": "UrbanTrends",
+      "price": 699,
+      "img": "https://m.media-amazon.com/images/I/71vvtNbCSfL._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "25",
+      "category": "Dresser",
+      "name": "French Provincial Dresser",
+      "brand": "ElegantDesigns",
+      "price": 1499,
+      "img": "https://images.squarespace-cdn.com/content/v1/6143ee0b6587843ad205c9db/88b9ff65-6d99-4e89-8f66-011ff27b706c/IMG_6474.JPG"
+    },
+    {
+      "id": "7",
+      "category": "Sofa",
+      "name": "Cozy Fabric Sofa",
+      "brand": "SoftTouch",
+      "price": 3899,
+      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1642126670/crusader/variants/50440761-MC4002/Hamilton-Left-Sectional-Sofa-Brilliant-White-Square-Set_4.jpg"
+    },
+    {
+      "id": "20",
+      "category": "Dresser",
+      "name": "Modern Mirrored Dresser",
+      "brand": "ChicDesigns",
+      "price": 899,
+      "img": "https://astarfurn.com/cdn/shop/products/products_coaster_color_robyn--181734809_205133_4-b1.jpg?v=1553545339"
     },
     {
       "id": "29",
@@ -159,14 +153,6 @@
       "brand": "ElegantDine",
       "price": 699,
       "img": "https://www.zurifurniture.com/common/images/products/large/enzo_extension_dining_table_above_3.jpg"
-    },
-    {
-      "id": "7",
-      "category": "Sofa",
-      "name": "Cozy Fabric Sofa",
-      "brand": "SoftTouch",
-      "price": 3899,
-      "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1642126670/crusader/variants/50440761-MC4002/Hamilton-Left-Sectional-Sofa-Brilliant-White-Square-Set_4.jpg"
     },
     {
       "id": "8",
@@ -215,16 +201,22 @@
       "brand": "SpaceSaver",
       "price": 1649,
       "img": "https://i02.hsncdn.com/is/image/HomeShoppingNetwork/rocs1200/tristan-1-drawer-queen-size-platform-storage-bed-with-s-d-20210212111347923~9903638w.jpg"
-    }
-  ],
-  "archive": [
+    },
     {
-      "id": "11",
-      "category": "Table Set",
-      "name": "Compact Bistro Table Set",
-      "brand": "UrbanLiving",
-      "price": 899,
-      "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg"
+      "id": "Mni",
+      "brand": "UNIZONE",
+      "name": "Full Size Upholstered Bed Frame",
+      "category": "Bed",
+      "img": "https://m.media-amazon.com/images/I/71thE7qpldL._AC_SX679_.jpg",
+      "price": 449
+    },
+    {
+      "id": "14",
+      "category": "Storage",
+      "name": "Metal Storage Rack",
+      "brand": "SturdyRack",
+      "price": 179,
+      "img": "https://m.media-amazon.com/images/I/51f64ek-yNL._AC_SX679_.jpg"
     },
     {
       "id": "3",
@@ -235,12 +227,28 @@
       "img": "https://www.sierralivingconcepts.com/images/thumbs/0412960_pecos-mission-solid-wood-platform-bed-frame.jpeg"
     },
     {
-      "id": "14",
-      "category": "Storage",
-      "name": "Metal Storage Rack",
-      "brand": "SturdyRack",
-      "price": 179,
-      "img": "https://m.media-amazon.com/images/I/51f64ek-yNL._AC_SX679_.jpg"
+      "id": "11",
+      "category": "Table Set",
+      "name": "Compact Bistro Table Set",
+      "brand": "UrbanLiving",
+      "price": 899,
+      "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg"
+    },
+    {
+      "id": "16",
+      "category": "Table Set",
+      "name": "Rustic Farmhouse Dining Set",
+      "brand": "CountryLiving",
+      "price": 799,
+      "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg"
+    },
+    {
+      "id": "16",
+      "category": "Table Set",
+      "name": "Rustic Farmhouse Dining Set",
+      "brand": "CountryLiving",
+      "price": 799,
+      "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg"
     }
   ]
 }

@@ -4,6 +4,7 @@ const ROUTES = {
   ADD: `add`,
   ARCHIVE: `archive`,
   LOGIN: `login`,
+  EDIT: `edit/:productId`,
   ERROR: `*`,
 };
 
