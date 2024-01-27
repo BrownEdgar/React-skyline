@@ -11,7 +11,7 @@ export default function Editor() {
   const [loading, setLoading] = useState(true);
 
   const categories = ["Table Set", "Sofa", "Bed", "Dresser", "Storage"];
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchProduct(editId);
@@ -20,8 +20,17 @@ export default function Editor() {
   const fetchProduct = async (id) => {
     try {
       setLoading(true);
-      const response = await axios.get(`http://localhost:3000/products/${id}`);
-      setProduct(response.data);
+      const productsRes = await axios.get(
+        `http://localhost:3000/products/${id}`
+      );
+      const archiveRes = await axios.get(`http://localhost:3000/archive/${id}`);
+
+      if (productsRes.data) {
+        setProduct(productsRes.data);
+      } else if (archiveRes.data) {
+        setProduct(archiveRes.data);
+      }
+
       setLoading(false);
     } catch (error) {
       console.error("Error fetching product:", error);
@@ -43,6 +52,7 @@ export default function Editor() {
     } catch (error) {
       console.error("Error updating product:", error);
     }
+    navigate(-1);
   };
 
   return (
@@ -53,11 +63,11 @@ export default function Editor() {
       ) : (
         <Formik
           initialValues={{
-            brand: product.brand || "",
-            name: product.name || "",
-            category: product.category || "",
-            img: product.img || "",
-            price: product.price || "",
+            brand: product.brand,
+            name: product.name,
+            category: product.category,
+            img: product.img,
+            price: product.price,
           }}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
