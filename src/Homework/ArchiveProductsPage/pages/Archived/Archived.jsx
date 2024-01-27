@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import "./Archived.scss";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
 
 import { VscTriangleLeft } from "react-icons/vsc";
 import Pagination from "../../Pagination/Pagination";
+import { Link } from "react-router-dom";
 
 export default function Archived() {
   const [products, setProducts] = useState([]);
@@ -43,12 +43,11 @@ export default function Archived() {
 
   return (
     <div className="Archive">
-      <h1>Archived Inventory</h1>
       <div className="Archive__container">
         {products.length > 0 ? (
           currentItems.map((product) => (
             <div className="Archive__box" key={product.id}>
-              <Link className="img" to={`/${product.id}`}>
+              <Link className="img" to={`/archive/${product.id}`}>
                 <img src={product.img} alt={product.name} />
               </Link>
               <div className="info">

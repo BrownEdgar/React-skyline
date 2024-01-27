@@ -1,0 +1,47 @@
+.Home {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+
+  .slider {
+    width: 85%;
+    position: relative;
+    overflow: hidden;
+    height: 750px;
+
+    .slides {
+      width: 100%;
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(42, 181, 0, 0.5);
+      color: white;
+      font-size: 24px;
+      border: none;
+      padding: 15px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: rgba(42, 181, 0, 1);
+      }
+
+      &.prev {
+        left: 10px;
+      }
+
+      &.next {
+        right: 10px;
+      }
+    }
+  }
+}

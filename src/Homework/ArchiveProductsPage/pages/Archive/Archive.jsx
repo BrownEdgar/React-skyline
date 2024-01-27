@@ -1,31 +1,31 @@
 import React, { useEffect, useState } from "react";
-import "./Product.scss";
+import "./Archive.scss";
 import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import ROUTES from "../../routes";
 
-export default function Product() {
-  const { productId } = useParams();
+export default function Archive() {
+  const { archiveID } = useParams();
   const [product, setProduct] = useState({});
-  console.log(productId);
+  console.log(archiveID);
 
   useEffect(() => {
-    if (productId) {
+    if (archiveID) {
       axios
-        .get(`http://localhost:3000/products/${productId}`)
+        .get(`http://localhost:3000/archive/${archiveID}`)
         .then((res) => setProduct(res.data));
     }
-  }, [productId]);
+  }, [archiveID]);
 
   return (
-    <div className="Product">
-      <div className="Product__box">
+    <div className="Archives">
+      <div className="Archives__box">
         <img className="product-img" src={product.img} alt={product.name} />
-        <Link className="go-back" to={"/" + ROUTES.PRODUCTS}>
+        <Link className="go-back" to={"/" + ROUTES.ARCHIVE}>
           <IoArrowBackCircleSharp />
         </Link>
-        <Link className="edit" to={`/${ROUTES.EDIT}/${productId}`}>
+        <Link className="edit" to={`/${ROUTES.EDIT}/${archiveID}`}>
           Edit
         </Link>
 

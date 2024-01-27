@@ -4,11 +4,13 @@ import "./Products.scss";
 import axios from "axios";
 import { FaTrash, FaArchive } from "react-icons/fa";
 import Pagination from "../../Pagination/Pagination";
+import ROUTES from "../../routes";
 
 export default function Products() {
   const [page, setPage] = useState(1);
   const [perPage] = useState(8);
   const [products, setProducts] = useState([]);
+
   const [isLogin] = useState(Boolean(window.localStorage.getItem("login")));
   const containerClass = isLogin
     ? "Products__container"
@@ -66,7 +68,7 @@ export default function Products() {
       <div className={containerClass}>
         {currentItems.map((product) => (
           <div className="Products__box" key={product.id}>
-            <Link className="img" to={`/${product.id}`}>
+            <Link className="img" to={`/products/${product.id}`}>
               <img src={product.img} alt={product.name} />
             </Link>
             <div className="info">
