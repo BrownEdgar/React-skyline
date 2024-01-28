@@ -47,14 +47,14 @@ const [user, setUser] = useState(true)
       ...values
     }
 
-  axios.post('http://localhost:3000/products', products)
-      .then(res => console.log(res))
-      .catch(err => console.log(err))
-      .finally(() => {
-        navigate(ROUTES.HOME)
-      })
-    formik.resetForm()
-  }
+    axios.post('http://localhost:3000/products', products)
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+        .finally(() => {
+          navigate(ROUTES.HOME)
+        })
+      formik.resetForm()
+    }
 
   
 

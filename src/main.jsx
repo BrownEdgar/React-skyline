@@ -1,6 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './Zara/customHooks/App'
+import App from './Zara/pagination/Pagination/App'
 import './index.css'
 // import { BrowserRouter as Router } from 'react-router-dom'
 
