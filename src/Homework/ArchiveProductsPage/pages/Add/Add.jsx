@@ -91,7 +91,7 @@ export default function Add() {
               <Field type="url" id="img" name="img" />
             </div>
           </div>
-          <div>
+          <div className="submit-container">
             <input className="submit" type="submit" value="Add Product" />
           </div>
         </Form>

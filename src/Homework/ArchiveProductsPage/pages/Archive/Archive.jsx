@@ -5,27 +5,27 @@ import axios from "axios";
 import { IoArrowBackCircleSharp } from "react-icons/io5";
 import ROUTES from "../../routes";
 
-export default function Archive() {
-  const { archiveID } = useParams();
+export default function Product() {
+  const { archiveId } = useParams();
   const [product, setProduct] = useState({});
-  console.log(archiveID);
+  console.log(archiveId);
 
   useEffect(() => {
-    if (archiveID) {
+    if (archiveId) {
       axios
-        .get(`http://localhost:3000/archive/${archiveID}`)
+        .get(`http://localhost:3000/products/${archiveId}`)
         .then((res) => setProduct(res.data));
     }
-  }, [archiveID]);
+  }, [archiveId]);
 
   return (
-    <div className="Archives">
-      <div className="Archives__box">
+    <div className="Product">
+      <div className="Product__box">
         <img className="product-img" src={product.img} alt={product.name} />
         <Link className="go-back" to={"/" + ROUTES.ARCHIVE}>
           <IoArrowBackCircleSharp />
         </Link>
-        <Link className="edit" to={`/${ROUTES.EDIT}/${archiveID}`}>
+        <Link className="edit" to={`/${ROUTES.EDIT}/${archiveId}`}>
           Edit
         </Link>
 

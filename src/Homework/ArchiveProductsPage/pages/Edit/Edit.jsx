@@ -10,29 +10,8 @@ export default function Edit() {
   const [page, setPage] = useState(1);
   const [perPage] = useState(8);
 
-  useEffect(() => {
-    fetchAllProducts();
-  }, []);
-
-  const fetchAllProducts = async () => {
-    try {
-      const productsRes = await axios.get("http://localhost:3000/products");
-      const archiveRes = await axios.get("http://localhost:3000/archive");
-      const combinedProducts = [...productsRes.data, ...archiveRes.data];
-      setProducts(combinedProducts);
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  };
-
-  const deleteProduct = async (id) => {
-    try {
-      await axios.delete(`http://localhost:3000/products/${id}`);
-      await axios.delete(`http://localhost:3000/archive/${id}`);
-      fetchAllProducts();
-    } catch (error) {
-      console.error("Error deleting product:", error);
-    }
+  const deleteProduct = (id) => {
+    axios.delete(`http://localhost:3000/products/${id}`);
   };
 
   const itemsCount = page * perPage;
@@ -43,16 +22,14 @@ export default function Edit() {
     setPage(n);
   };
 
-  const archiveProduct = async (id) => {
-    try {
-      const productToArchive = products.find((product) => product.id === id);
-      await axios.post("http://localhost:3000/archive", productToArchive);
-      await axios.delete(`http://localhost:3000/products/${id}`);
-      fetchAllProducts();
-    } catch (error) {
-      console.error("Error archiving product:", error);
-    }
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await axios.get("http://localhost:3000/products", {});
+      setProducts(res.data);
+    };
+
+    fetchData();
+  }, [products]);
   return (
     <div className="Edit">
       <div className="Edit__container">
@@ -69,6 +46,7 @@ export default function Edit() {
                     ? `${product.name.slice(0, 30)}...`
                     : product.name}
                 </p>
+                <p>{product.archived}</p>
               </div>
               <div className="interact">
                 <p className="price">{product.price + "$"}</p>

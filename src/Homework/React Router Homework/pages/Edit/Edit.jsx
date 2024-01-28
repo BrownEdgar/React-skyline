@@ -3,10 +3,10 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { FaPlusCircle } from "react-icons/fa";
 import { MdDeleteForever } from "react-icons/md";
-import "./Editor.scss";
+import "./Edit.scss";
 import ROUTES from "../../routes";
 
-export default function Editor() {
+export default function Edit() {
   const [products, setProducts] = useState([]);
   const [currentId, setCurrentId] = useState(null);
 

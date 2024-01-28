@@ -21,7 +21,7 @@ import {
   Post,
   Products,
   Product,
-  Editor,
+  Edit,
   Add,
 } from "./pages/index";
 import Layouts from "./Layouts/Layouts";
@@ -59,7 +59,7 @@ export default function App() {
           loader={productsLoader}
         />
         <Route path={ROUTES.PRODUCT} element={<Product />} />
-        <Route path={ROUTES.EDITOR} element={<Editor />} />
+        <Route path={ROUTES.EDITOR} element={<Edit />} />
         <Route path={ROUTES.ADD} element={<Add />} />
 
         <Route path={ROUTES.ERROR} element={<Error />} />

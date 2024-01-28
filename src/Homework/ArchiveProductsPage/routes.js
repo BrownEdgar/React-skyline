@@ -1,10 +1,13 @@
 const ROUTES = {
-  PRODUCTS: `/`,
-  PRODUCT: `:productId`,
+  HOME: `/`,
+  PRODUCTS: `products`,
+  PRODUCT: `products/:productId`,
   ADD: `add`,
   ARCHIVE: `archive`,
+  ARCHIVES: `archive/:archiveId`,
   LOGIN: `login`,
-  EDIT: `edit/:productId`,
+  EDIT: `edit`,
+  EDITOR: `edit/:editId`,
   ERROR: `*`,
 };
 

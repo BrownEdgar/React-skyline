@@ -5,11 +5,15 @@ import axios from "axios";
 import { FaTrash, FaArchive } from "react-icons/fa";
 import Pagination from "../../Pagination/Pagination";
 import ROUTES from "../../routes";
+import Modal from "../../Modal/Modal";
 
 export default function Products() {
   const [page, setPage] = useState(1);
   const [perPage] = useState(8);
   const [products, setProducts] = useState([]);
+  const [filterCategory, setFilterCategory] = useState(null);
+  const [selectedProductId, setSelectedProductId] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const [isLogin] = useState(Boolean(window.localStorage.getItem("login")));
   const containerClass = isLogin
@@ -18,24 +22,28 @@ export default function Products() {
 
   useEffect(() => {
     fetchProducts();
-  }, [isLogin]);
+  }, [isLogin, filterCategory]);
 
   const fetchProducts = async () => {
     try {
-      let res;
-      if (isLogin) {
-        res = await axios.get("http://localhost:3000/products");
-      } else {
-        res = await axios.get("http://localhost:3000/products?_limit=4");
+      let url = "http://localhost:3000/products?archived=no";
+      if (filterCategory) {
+        url += `&category=${filterCategory}`;
       }
+
+      const res = await axios.get(url);
       setProducts(res.data);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
-  console.log(products.length);
-  const itemsCount = page * perPage;
 
+  const handleFilterByCategory = (category) => {
+    setPage(1);
+    setFilterCategory(category);
+  };
+
+  const itemsCount = page * perPage;
   const currentItems = products.slice(itemsCount - perPage, itemsCount);
 
   const changePage = (n) => {
@@ -43,28 +51,52 @@ export default function Products() {
   };
 
   const deleteProduct = async (id) => {
+    setSelectedProductId(id);
+    setIsModalOpen(true);
+  };
+
+  const handleConfirmDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/products/${id}`);
+      await axios.delete(`http://localhost:3000/products/${selectedProductId}`);
       fetchProducts();
     } catch (error) {
       console.error("Error deleting product:", error);
     }
+    setIsModalOpen(false);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
   };
 
   const archiveProduct = async (id) => {
     try {
       const productToArchive = products.find((product) => product.id === id);
-      await axios.post("http://localhost:3000/archive", productToArchive);
-      await axios.delete(`http://localhost:3000/products/${id}`);
+      productToArchive.archived = "yes";
+      await axios.put(`http://localhost:3000/products/${id}`, productToArchive);
       fetchProducts();
-      console.log(`Product with ID ${id} archived and deleted.`);
+      console.log(`Product with ID ${id} archived status updated.`);
     } catch (error) {
-      console.error("Error archiving product:", error);
+      console.error("Error updating archived status:", error);
     }
   };
 
   return (
     <div className="Products">
+      <div className="sorting-buttons">
+        <button onClick={() => handleFilterByCategory(null)}>Show All</button>
+        <button onClick={() => handleFilterByCategory("Sofa")}>Sofas</button>
+        <button onClick={() => handleFilterByCategory("Bed")}>Beds</button>
+        <button onClick={() => handleFilterByCategory("Table Set")}>
+          Table Sets
+        </button>
+        <button onClick={() => handleFilterByCategory("Dresser")}>
+          Dressers
+        </button>
+        <button onClick={() => handleFilterByCategory("Storage")}>
+          Storages
+        </button>
+      </div>
       <div className={containerClass}>
         {currentItems.map((product) => (
           <div className="Products__box" key={product.id}>
@@ -79,6 +111,7 @@ export default function Products() {
                     ? `${product.name.slice(0, 30)}...`
                     : product.name}
                 </p>
+                <p>{product.archived}</p>
               </div>
               <div className="interact">
                 <p className="price">{product.price + "$"}</p>
@@ -117,6 +150,11 @@ export default function Products() {
           <p>Please Log in as Admin to view products</p>
         </div>
       )}
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={closeModal}
+        handleConfirm={handleConfirmDelete}
+      />
     </div>
   );
 }

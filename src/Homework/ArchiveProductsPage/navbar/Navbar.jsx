@@ -2,19 +2,20 @@ import { NavLink } from "react-router-dom";
 import "./Navbar.scss";
 import ROUTES from "../routes";
 import { AiFillAlipayCircle } from "react-icons/ai";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const [isLogin, setIsLogin] = useState(
     Boolean(window.localStorage.getItem("login"))
   );
+
   useEffect(() => {
     setIsLogin(Boolean(window.localStorage.getItem("login")));
   }, [isLogin]);
 
   const logOut = () => {
     window.localStorage.removeItem("login");
-    setIsLogin(null);
+    setIsLogin(false);
   };
 
   return (
@@ -31,10 +32,16 @@ export default function Navbar() {
           </div>
           <div className="links">
             <li>
-              <NavLink to={ROUTES.PRODUCTS}>Furniture</NavLink>
+              <NavLink to={ROUTES.HOME}>Home</NavLink>
+            </li>
+            <li>
+              <NavLink to={"/" + ROUTES.PRODUCTS}>Furniture</NavLink>
             </li>
             {isLogin && (
               <>
+                <li>
+                  <NavLink to={ROUTES.EDIT}>Edit</NavLink>
+                </li>
                 <li>
                   <NavLink to={ROUTES.ADD}>Add</NavLink>
                 </li>

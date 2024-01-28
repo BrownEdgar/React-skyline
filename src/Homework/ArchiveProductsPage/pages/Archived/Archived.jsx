@@ -1,19 +1,42 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import "./Archived.scss";
 import axios from "axios";
 import { FaTrash } from "react-icons/fa";
-
 import { VscTriangleLeft } from "react-icons/vsc";
 import Pagination from "../../Pagination/Pagination";
 import { Link } from "react-router-dom";
+import Modal from "../../Modal/Modal";
 
 export default function Archived() {
   const [products, setProducts] = useState([]);
   const [page, setPage] = useState(1);
   const [perPage] = useState(8);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
-  const deleteProduct = (id) => {
-    axios.delete(`http://localhost:3000/archive/${id}`);
+  const openModal = (id) => {
+    setSelectedProductId(id);
+    setIsModalOpen(true);
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  };
+
+  const deleteProduct = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3000/products/${id}`);
+      fetchProducts();
+      closeModal(); // Close modal after deletion
+    } catch (error) {
+      console.error("Error deleting product:", error);
+    }
+  };
+
+  const handleConfirmDelete = () => {
+    if (selectedProductId) {
+      deleteProduct(selectedProductId);
+    }
   };
 
   const archiveProduct = async (id) => {
@@ -25,7 +48,6 @@ export default function Archived() {
   };
 
   const itemsCount = page * perPage;
-
   const currentItems = products.slice(itemsCount - perPage, itemsCount);
 
   const changePage = (n) => {
@@ -34,12 +56,18 @@ export default function Archived() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await axios.get("http://localhost:3000/archive", {});
-      setProducts(res.data);
+      try {
+        const res = await axios.get(
+          "http://localhost:3000/products?archived=yes"
+        );
+        setProducts(res.data);
+      } catch (error) {
+        console.error("Error fetching archived products:", error);
+      }
     };
 
     fetchData();
-  }, [products]);
+  }, []);
 
   return (
     <div className="Archive">
@@ -64,9 +92,7 @@ export default function Archived() {
                   <div className="buttons">
                     <button
                       className="delete-button"
-                      onClick={() => {
-                        deleteProduct(product.id);
-                      }}
+                      onClick={() => openModal(product.id)}
                     >
                       Delete <FaTrash className="icon-trash" />
                     </button>
@@ -92,6 +118,11 @@ export default function Archived() {
           changePage={changePage}
         />
       )}
+      <Modal
+        isOpen={isModalOpen}
+        handleClose={closeModal}
+        handleConfirm={handleConfirmDelete}
+      />
     </div>
   );
 }

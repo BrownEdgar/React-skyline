@@ -1,5 +1,6 @@
 import React from "react";
 import "./Pagination.scss";
+import { Link } from "react-router-dom";
 
 export default function Pagination({ pages, total, changePage }) {
   const numbers = [];
@@ -12,7 +13,7 @@ export default function Pagination({ pages, total, changePage }) {
       <ul className="pagination">
         {numbers.map((el) => (
           <li key={el} onClick={() => changePage(el)}>
-            <a href="#">{el}</a>
+            <Link>{el}</Link>
           </li>
         ))}
       </ul>

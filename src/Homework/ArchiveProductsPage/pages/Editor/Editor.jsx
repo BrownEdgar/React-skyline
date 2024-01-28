@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import axios from "axios";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+
 import "./Editor.scss";
 
 export default function Editor() {
@@ -23,13 +24,8 @@ export default function Editor() {
       const productsRes = await axios.get(
         `http://localhost:3000/products/${id}`
       );
-      const archiveRes = await axios.get(`http://localhost:3000/archive/${id}`);
 
-      if (productsRes.data) {
-        setProduct(productsRes.data);
-      } else if (archiveRes.data) {
-        setProduct(archiveRes.data);
-      }
+      setProduct(productsRes.data);
 
       setLoading(false);
     } catch (error) {
@@ -48,7 +44,13 @@ export default function Editor() {
 
   const handleSubmit = async (values) => {
     try {
-      await axios.put(`http://localhost:3000/products/${editId}`, values);
+      await axios.patch(`http://localhost:3000/products/${editId}`, {
+        brand: values.brand,
+        name: values.name,
+        category: values.category,
+        img: values.img,
+        price: values.price,
+      });
     } catch (error) {
       console.error("Error updating product:", error);
     }
