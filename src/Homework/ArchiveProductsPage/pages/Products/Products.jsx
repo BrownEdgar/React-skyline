@@ -4,6 +4,8 @@ import "./Products.scss";
 import axios from "axios";
 import { FaTrash, FaArchive } from "react-icons/fa";
 import Pagination from "../../Pagination/Pagination";
+import moment from "moment";
+
 import ROUTES from "../../routes";
 import Modal from "../../Modal/Modal";
 
@@ -27,6 +29,10 @@ export default function Products() {
   const fetchProducts = async () => {
     try {
       let url = "http://localhost:3000/products?archived=no";
+      if (!isLogin) {
+        url += "&_limit=4";
+      }
+
       if (filterCategory) {
         url += `&category=${filterCategory}`;
       }
@@ -73,6 +79,9 @@ export default function Products() {
     try {
       const productToArchive = products.find((product) => product.id === id);
       productToArchive.archived = "yes";
+      productToArchive.archivedDate = moment().format(
+        "MMMM Do YYYY, h:mm:ss a"
+      );
       await axios.put(`http://localhost:3000/products/${id}`, productToArchive);
       fetchProducts();
       console.log(`Product with ID ${id} archived status updated.`);
@@ -83,20 +92,22 @@ export default function Products() {
 
   return (
     <div className="Products">
-      <div className="sorting-buttons">
-        <button onClick={() => handleFilterByCategory(null)}>Show All</button>
-        <button onClick={() => handleFilterByCategory("Sofa")}>Sofas</button>
-        <button onClick={() => handleFilterByCategory("Bed")}>Beds</button>
-        <button onClick={() => handleFilterByCategory("Table Set")}>
-          Table Sets
-        </button>
-        <button onClick={() => handleFilterByCategory("Dresser")}>
-          Dressers
-        </button>
-        <button onClick={() => handleFilterByCategory("Storage")}>
-          Storages
-        </button>
-      </div>
+      {isLogin && (
+        <div className="sorting-buttons">
+          <button onClick={() => handleFilterByCategory(null)}>Show All</button>
+          <button onClick={() => handleFilterByCategory("Sofa")}>Sofas</button>
+          <button onClick={() => handleFilterByCategory("Bed")}>Beds</button>
+          <button onClick={() => handleFilterByCategory("Table Set")}>
+            Table Sets
+          </button>
+          <button onClick={() => handleFilterByCategory("Dresser")}>
+            Dressers
+          </button>
+          <button onClick={() => handleFilterByCategory("Storage")}>
+            Storages
+          </button>
+        </div>
+      )}
       <div className={containerClass}>
         {currentItems.map((product) => (
           <div className="Products__box" key={product.id}>
@@ -111,7 +122,6 @@ export default function Products() {
                     ? `${product.name.slice(0, 30)}...`
                     : product.name}
                 </p>
-                <p>{product.archived}</p>
               </div>
               <div className="interact">
                 <p className="price">{product.price + "$"}</p>

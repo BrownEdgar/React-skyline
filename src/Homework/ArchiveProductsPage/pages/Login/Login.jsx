@@ -56,7 +56,9 @@ export default function Login() {
             <button type="submit" disabled={isSubmitting}>
               Submit
             </button>
-            {loginError && <p>Invalid login or password</p>}
+            {loginError && (
+              <p className="error-submit">Invalid login or password</p>
+            )}
           </Form>
         )}
       </Formik>

@@ -27,7 +27,7 @@ export default function Archived() {
     try {
       await axios.delete(`http://localhost:3000/products/${id}`);
       fetchProducts();
-      closeModal(); // Close modal after deletion
+      closeModal();
     } catch (error) {
       console.error("Error deleting product:", error);
     }
@@ -40,11 +40,28 @@ export default function Archived() {
   };
 
   const archiveProduct = async (id) => {
-    const productToArchive = products.find((product) => product.id === id);
+    try {
+      const productToArchive = products.find((product) => product.id === id);
 
-    await axios.post("http://localhost:3000/products", productToArchive);
-    await deleteProduct(id);
-    console.log(`Product with ID ${id} archived and deleted.`);
+      productToArchive.archived = "no";
+      delete productToArchive.archivedDate;
+      await axios.put(`http://localhost:3000/products/${id}`, productToArchive);
+      fetchProducts();
+      console.log(`Product with ID ${id} archived status updated.`);
+    } catch (error) {
+      console.error("Error updating archived status:", error);
+    }
+  };
+
+  const fetchProducts = async () => {
+    try {
+      const res = await axios.get(
+        "http://localhost:3000/products?archived=yes"
+      );
+      setProducts(res.data);
+    } catch (error) {
+      console.error("Error fetching archived products:", error);
+    }
   };
 
   const itemsCount = page * perPage;
@@ -55,18 +72,7 @@ export default function Archived() {
   };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await axios.get(
-          "http://localhost:3000/products?archived=yes"
-        );
-        setProducts(res.data);
-      } catch (error) {
-        console.error("Error fetching archived products:", error);
-      }
-    };
-
-    fetchData();
+    fetchProducts();
   }, []);
 
   return (
@@ -88,6 +94,9 @@ export default function Archived() {
                   </p>
                 </div>
                 <div className="interact">
+                  <p className="date">
+                    Archived Date: <span> {product.archivedDate} </span>
+                  </p>
                   <p className="price">{product.price + "$"}</p>
                   <div className="buttons">
                     <button

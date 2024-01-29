@@ -78,12 +78,12 @@ export default function Editor() {
             <div>
               <label htmlFor="brand">Brand:</label>
               <Field type="text" id="brand" name="brand" />
-              <ErrorMessage name="brand" component="div" />
+              <ErrorMessage className="error" name="brand" component="div" />
             </div>
             <div>
               <label htmlFor="name">Name:</label>
               <Field type="text" id="name" name="name" />
-              <ErrorMessage name="name" component="div" />
+              <ErrorMessage className="error" name="name" component="div" />
             </div>
             <div>
               <label htmlFor="category">Category:</label>
@@ -97,17 +97,21 @@ export default function Editor() {
                   </option>
                 ))}
               </Field>
-              <ErrorMessage name="ccategory" component="div" />
+              <ErrorMessage
+                className="error"
+                name="ccategory"
+                component="div"
+              />
             </div>
             <div>
               <label htmlFor="img">Image URL:</label>
               <Field type="text" id="img" name="img" />
-              <ErrorMessage name="img" component="div" />
+              <ErrorMessage className="error" name="img" component="div" />
             </div>
             <div>
               <label htmlFor="price">Price:</label>
               <Field type="number" id="price" name="price" />
-              <ErrorMessage name="price" component="div" />
+              <ErrorMessage className="error" name="price" component="div" />
             </div>
             <button type="submit">Submit</button>
           </Form>

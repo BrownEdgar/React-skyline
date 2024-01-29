@@ -46,7 +46,6 @@ export default function Edit() {
                     ? `${product.name.slice(0, 30)}...`
                     : product.name}
                 </p>
-                <p>{product.archived}</p>
               </div>
               <div className="interact">
                 <p className="price">{product.price + "$"}</p>

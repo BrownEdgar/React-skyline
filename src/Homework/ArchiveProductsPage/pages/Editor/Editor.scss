@@ -13,7 +13,16 @@
     display: grid;
     grid-gap: 10px;
     width: 555px;
+    position: relative;
+    .error {
+      top: 45px;
+      left: 10px;
+      font-weight: 700;
 
+      font-size: 20px;
+      position: absolute;
+      color: rgb(255, 42, 42);
+    }
     div {
       display: flex;
       flex-direction: column;
