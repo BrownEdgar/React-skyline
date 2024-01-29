@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { plus, minus } from '../features/countSlice/countSlice'
+import { plus, minus } from '../features/count/countSlice'
 
 export default function COunter() {
   const count = useSelector(state => state.count)

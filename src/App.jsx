@@ -1,7 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearList, pushUser } from './features/usersSlice/usersSlice';
+import { clearList, pushUser } from './features/users/usersSlice';
 import COunter from './components/COunter';
+
+import './App.css'
 
 export default function App() {
   const users = useSelector(state => state.users);
@@ -13,7 +15,7 @@ export default function App() {
   }
 
   return (
-    <div>
+    <div className='App'>
       <h1>hello redux</h1>
       <COunter />
       <form onSubmit={handleSubmit}>
