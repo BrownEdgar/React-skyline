@@ -5,6 +5,7 @@ body {
 .App {
   max-width: 1200px;
   margin: 0 auto;
+  color: #fff;
 }
 
 .App>h1 {
@@ -13,4 +14,13 @@ body {
   color: grey;
   padding: 1em;
   font-size: 3em;
+}
+
+pre {
+  background-color: #1d1d1d;
+  padding: 1em;
+  border-radius: 8px;
+  border: 1px solid #fff;
+  margin: 40px auto;
+  width: 600px;
 }

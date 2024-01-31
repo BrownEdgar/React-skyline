@@ -1,4 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { actionForAll } from '../actions/actions';
+
 
 const countSlice = createSlice({
   name: 'count',
@@ -10,6 +12,11 @@ const countSlice = createSlice({
     minus(state) {
       return state - 1;
     }
+  },
+  extraReducers: (builder) => {
+    builder.addCase(actionForAll, (state, { payload: { count } }) => {
+      return state + (count || 1);
+    })
   }
 })
 
