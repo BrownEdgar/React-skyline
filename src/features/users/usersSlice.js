@@ -3,7 +3,12 @@ import { actionForAll } from '../actions/actions';
 import axios from 'axios';
 
 const initialUsersValue = {
-  data: [],
+  data: [
+    {
+      "name": "Glenna Reichert",
+      "email": "Chaim_McDermott@dana.io"
+    },
+  ],
   loading: false,
   error: null
 }
@@ -27,15 +32,13 @@ const usersSlice = createSlice({
         state.loading = true
       })
       .addCase(getUsersAsync.fulfilled, (state, action) => {
-        console.log('fulfilled', action)
         return {
-          data: action.payload,
+          data: [...state.data, ...action.payload],
           loading: false,
           error: null
         }
       })
       .addCase(getUsersAsync.rejected, (state, action) => {
-        console.log('rejected', action)
         state.error = action.error
         state.loading = false
       })
@@ -48,7 +51,7 @@ const usersSlice = createSlice({
       })
   },
   selectors: {
-    usersSelector: state => state.data.map(user => ({ name: user.name, email: user.email })),
+    usersSelector: state => state.data,
     getUsersStatus: state => state.loading,
   }
 })
