@@ -4,7 +4,7 @@ import { Field, Formik, Form } from "formik";
 import axios from "axios";
 import { nanoid } from "nanoid";
 import moment from "moment";
-import * as Yup from "yup"; // Import Yup for validation
+import * as Yup from "yup";
 
 import { useNavigate } from "react-router-dom";
 import ROUTES from "../../routes";
@@ -33,15 +33,14 @@ export default function Add() {
   const handleSubmit = async (values, formik) => {
     try {
       await validationSchema.validate(values, { abortEarly: false });
-      const currentDate = moment().format("lll");
 
       const products = {
         id: nanoid(3),
-        createDate: currentDate,
+        archived: "no",
         ...values,
       };
       await axios.post("http://localhost:3000/products", products);
-      nav(ROUTES.PRODUCTS);
+      nav("/" + ROUTES.PRODUCTS);
       formik.resetForm();
     } catch (error) {
       console.error("Validation Error:", error);

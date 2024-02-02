@@ -7,8 +7,7 @@
       "brand": "ComfortLiving",
       "price": 5299,
       "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1691572417/crusader/variants/AS-000390-LE4016/Jonathan-Leather-Extended-Side-Left-Chaise-Sectional-Caramel-Square-Set_2-1691572414.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:25:16 pm"
+      "archived": "no"
     },
     {
       "id": "9",
@@ -17,7 +16,8 @@
       "brand": "BookCraft",
       "price": 979,
       "img": "https://www.zurifurniture.com/common/images/products/large/Hayes_Storage_Unit_Mahogany_Lifestyle_MAIN.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "January 30th 2024, 2:51:14 pm"
     },
     {
       "id": "11",
@@ -27,17 +27,17 @@
       "price": 899,
       "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg",
       "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:27:15 pm"
+      "archivedDate": "January 30th 2024, 2:51:15 pm"
     },
     {
       "id": "16",
       "category": "Table Set",
       "name": "Rustic Farmhouse Dining Set",
       "brand": "CountryLiving",
-      "price": 799,
+      "price": 8080809890,
       "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg",
       "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archivedDate": "January 30th 2024, 2:51:15 pm"
     },
     {
       "id": "17",
@@ -47,7 +47,7 @@
       "img": "https://m.media-amazon.com/images/I/91HsNPXsGYL.jpg",
       "price": 2999,
       "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archivedDate": "January 30th 2024, 2:51:15 pm"
     },
     {
       "id": "23",
@@ -57,7 +57,7 @@
       "price": 6999,
       "img": "https://media.designcafe.com/wp-content/uploads/2020/09/11115358/four-poster-bed.jpg",
       "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archivedDate": "January 30th 2024, 2:51:16 pm"
     },
     {
       "id": "26",
@@ -66,8 +66,7 @@
       "brand": "ModernLiving",
       "price": 799,
       "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/b34a0d5e4694b6f2525a733539aee4ff05d70a51/Glass-Dining-Table-with-Glass-Tabletop-and-Metal-Legs.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archived": "no"
     },
     {
       "id": "15",
