@@ -1,28 +1,33 @@
+// App.js
+
 import { useDispatch, useSelector } from "react-redux";
-import "./App.css";
-import { clearList, pushUser } from "./features/usersSlice/usersSlice";
+import { useEffect } from "react";
+import { getUsers, clearList } from "./features/usersSlice/usersSlice"; // Import getUsers action
 
 export default function App() {
-  const users = useSelector((state) => state.users);
+  const users = useSelector((state) => state.users.data);
+  const loading = useSelector((state) => state.users.loading);
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(pushUser(e.target.elements[0].value));
-    e.target.reset();
-  };
+  useEffect(() => {
+    dispatch(getUsers());
+  }, [dispatch]);
+
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="Username">Username</label>
-          <input type="text" />
-        </div>
-        <input type="submit" value="Add" />
-        <h3>{users.join(" ")}</h3>
-        <button onClick={() => dispatch(clearList())}>Clear</button>
-        <h4>Count: {users.length}</h4>
-      </form>
+      {loading ? (
+        <p>Loading...</p>
+      ) : (
+        <>
+          <h3>Users:</h3>
+          <ul>
+            {users.map((user) => (
+              <li key={user.id}>{user.name}</li>
+            ))}
+          </ul>
+          <button onClick={() => dispatch(clearList())}>Clear</button>
+        </>
+      )}
     </div>
   );
 }
