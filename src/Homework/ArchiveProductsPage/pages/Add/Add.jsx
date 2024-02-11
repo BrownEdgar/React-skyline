@@ -33,15 +33,15 @@ export default function Add() {
   const handleSubmit = async (values, formik) => {
     try {
       await validationSchema.validate(values, { abortEarly: false });
-      const currentDate = moment().format("lll");
 
-      const products = {
+      const productToAdd = {
         id: nanoid(3),
-        createDate: currentDate,
+        archived: "no",
         ...values,
       };
-      await axios.post("http://localhost:3000/products", products);
-      nav(ROUTES.PRODUCTS);
+
+      await axios.post("http://localhost:3000/products", productToAdd);
+      nav("/" + ROUTES.PRODUCTS);
       formik.resetForm();
     } catch (error) {
       console.error("Validation Error:", error);

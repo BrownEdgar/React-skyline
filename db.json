@@ -4,11 +4,10 @@
       "id": "2",
       "category": "Sofa",
       "name": "Luxury Leather Sofa",
-      "brand": "ComfortLiving",
+      "brand": "ComfortLiving ",
       "price": 5299,
       "img": "https://res.cloudinary.com/castlery/image/private/w_1200,f_auto,q_auto/b_rgb:F3F3F3,c_fit/v1691572417/crusader/variants/AS-000390-LE4016/Jonathan-Leather-Extended-Side-Left-Chaise-Sectional-Caramel-Square-Set_2-1691572414.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:25:16 pm"
+      "archived": "no"
     },
     {
       "id": "9",
@@ -26,8 +25,7 @@
       "brand": "UrbanLiving",
       "price": 899,
       "img": "https://m.media-amazon.com/images/I/91zipVgNh1L._AC_UF894,1000_QL80_.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:27:15 pm"
+      "archived": "no"
     },
     {
       "id": "16",
@@ -36,8 +34,7 @@
       "brand": "CountryLiving",
       "price": 799,
       "img": "https://m.media-amazon.com/images/I/81TOqMHlw-L.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archived": "no"
     },
     {
       "id": "17",
@@ -46,8 +43,7 @@
       "category": "Sofa",
       "img": "https://m.media-amazon.com/images/I/91HsNPXsGYL.jpg",
       "price": 2999,
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archived": "no"
     },
     {
       "id": "23",
@@ -56,8 +52,7 @@
       "brand": "RoyalComfort",
       "price": 6999,
       "img": "https://media.designcafe.com/wp-content/uploads/2020/09/11115358/four-poster-bed.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archived": "no"
     },
     {
       "id": "26",
@@ -66,8 +61,7 @@
       "brand": "ModernLiving",
       "price": 799,
       "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/b34a0d5e4694b6f2525a733539aee4ff05d70a51/Glass-Dining-Table-with-Glass-Tabletop-and-Metal-Legs.jpg",
-      "archived": "yes",
-      "archivedDate": "January 28th 2024, 11:31:03 pm"
+      "archived": "no"
     },
     {
       "id": "15",
@@ -75,8 +69,9 @@
       "name": "Mirrored Dresser",
       "category": "Dresser",
       "img": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTtslkPWFT7dT39IFbiBqP_PEUcNvEz5xV-p8PcVUdo0czheqC-5niZuEqi3eA9OCFUCe7QuGc-UOu20U89rGoKwxdcjsl0KLrUhoNpxxY",
-      "price": 579,
-      "archived": "no"
+      "price": 569,
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:02 pm"
     },
     {
       "id": "27",
@@ -85,7 +80,8 @@
       "brand": "UrbanComfort",
       "price": 1899,
       "img": "https://cdn.homefurn.com/thumbs/0048527_genoa-leather-queen-sleeper-sofa-gray.jpeg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:03 pm"
     },
     {
       "id": "22",
@@ -94,7 +90,8 @@
       "brand": "VintageVibes",
       "price": 2599,
       "img": "https://ak1.ostkcdn.com/images/products/is/images/direct/0f05b237b0b53ad686a56e61a4af484110d85ef3/Morgan-Velvet-Tufted-Scroll-Arm-Chesterfield-5-Seat-Curved-Sofa-by-iNSPIRE-Q-Bold.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:03 pm"
     },
     {
       "id": "28",
@@ -103,7 +100,8 @@
       "brand": "OpulentBeds",
       "price": 3499,
       "img": "https://images.squarespace-cdn.com/content/v1/5b11eabaa2772c11e194a936/1570749231895-F4DNQTRZO42DHYUN1OXC/Grey+Tufted+Bed.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:03 pm"
     },
     {
       "id": "18",
@@ -112,7 +110,8 @@
       "brand": "UrbanStyle",
       "price": 1799,
       "img": "https://www.modernmiami.com/media/catalog/product/cache/6d4faa98f2b48c05dae02148ead85f2f/o/p/opal1.jpeg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "19",
@@ -121,7 +120,8 @@
       "brand": "UrbanTrends",
       "price": 699,
       "img": "https://m.media-amazon.com/images/I/71vvtNbCSfL._AC_UF894,1000_QL80_.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "25",
@@ -130,7 +130,8 @@
       "brand": "ElegantDesigns",
       "price": 1499,
       "img": "https://images.squarespace-cdn.com/content/v1/6143ee0b6587843ad205c9db/88b9ff65-6d99-4e89-8f66-011ff27b706c/IMG_6474.JPG",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "6",
@@ -139,7 +140,8 @@
       "brand": "ElegantDine",
       "price": 699,
       "img": "https://www.zurifurniture.com/common/images/products/large/enzo_extension_dining_table_above_3.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "5",
@@ -148,7 +150,8 @@
       "brand": "RetroDesigns",
       "price": 499,
       "img": "https://ashleyfurniture.scene7.com/is/image/AshleyFurniture/B553-131-36-SW-P2-KO?$AFHS-PDP-Zoomed$",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "4",
@@ -157,7 +160,8 @@
       "brand": "OrganizeMaster",
       "price": 1699,
       "img": "https://assets.wfcdn.com/im/18160349/resize-w750%5Ecompr-r85/2312/231211478/Rushawn+Large+Amroire.jpg",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:04 pm"
     },
     {
       "id": "20",
@@ -166,7 +170,8 @@
       "brand": "ChicDesigns",
       "price": 899,
       "img": "https://astarfurn.com/cdn/shop/products/products_coaster_color_robyn--181734809_205133_4-b1.jpg?v=1553545339",
-      "archived": "no"
+      "archived": "yes",
+      "archivedDate": "February 10th 2024, 7:36:05 pm"
     },
     {
       "brand": "FarmhouseFinds",
@@ -269,6 +274,42 @@
       "price": 1999,
       "archived": "no",
       "archivedDate": "January 28th 2024"
+    },
+    {
+      "id": "ozw",
+      "archiced": "no",
+      "category": "Storage",
+      "name": "LG Microwave Neo 2.0",
+      "brand": "LG",
+      "price": 99,
+      "img": "https://assets.wfcdn.com/im/37657742/resize-h445%5Ecompr-r85/2555/255510804/Hermanus+Upholstered+Platform+Bed.jpg"
+    },
+    {
+      "id": "_kX",
+      "archived": "no",
+      "category": "Bed",
+      "name": "Asus Zenbook",
+      "brand": "Heramus",
+      "price": 234,
+      "img": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "aJx",
+      "archived": "no",
+      "category": "Sofa",
+      "name": "asdasd",
+      "brand": "Heramus",
+      "price": 234,
+      "img": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?q=80&w=2676&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "pvZ",
+      "archived": "no",
+      "category": "Sofa",
+      "name": "asdasd",
+      "brand": "Heramus",
+      "price": 123,
+      "img": "https://images.unsplash.com/photo-1636211992838-251a43d72ad2?q=80&w=2574&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
     }
   ]
 }
