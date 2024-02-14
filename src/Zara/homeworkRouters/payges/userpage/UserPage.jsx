@@ -58,11 +58,17 @@ const [user, setUser] = useState(true)
 
   
 
-  const handleSearch = (event)=>{
-    console.log(event.target.value);
-    setSearchdata(data.filter(f => {
-      return f.title.toLowerCase().includes(event.target.value.toLowerCase())
-    }))
+  const handleSearch = ({target})=>{
+    // console.log(searchValue);
+    console.log(target.value);
+   const searchValue =target.value
+    if (!searchValue) return data;
+    console.log(data);
+    // const result = data.filter(elem => elem.title.includes(searchValue))
+    const result = data.filter(elem => elem.title == searchValue)
+
+    console.log(result);
+    setData(result)
   }
 
   const userSubmit = (values, formik) => {
@@ -139,7 +145,7 @@ const [user, setUser] = useState(true)
         </div> : ""
       }
       <div>
-        <input type="search" className='search' placeholder='search' onClick={handleSearch}/>
+        <input type="search" className='search' placeholder='search' onChange={handleSearch}/>
       </div>
       <div className='userPage'>
         {data ? 

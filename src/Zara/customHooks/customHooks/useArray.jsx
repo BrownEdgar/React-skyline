@@ -11,7 +11,7 @@ export default function useArray(arr) {
     set:()=>setarray([1,2]), 
     push:()=>setarray([...array, 7]), 
     remove:() =>setarray(array.filter((elem) => elem !== array[1])),
-    filter:() =>setarray(array.filter(n => n < 4)), 
+    filter:(x) =>setarray(array.filter(n => n < x)), 
     update:()=>setarray(ar), 
     clear: ()=>setarray([]),
   

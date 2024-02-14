@@ -15,7 +15,7 @@ export default function ArrayComponent() {
       <button onClick={join}>join</button>
       <button onClick={push } >Add 7</button>
       <button onClick={remove}>Remove Second Element</button>
-      <button onClick={filter}>
+      <button onClick={()=>filter(4)}>
         Keep Numbers Less Than 4
       </button>
       <button onClick={set} >Set To 1, 2</button>
