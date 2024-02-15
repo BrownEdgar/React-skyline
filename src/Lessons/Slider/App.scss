@@ -1,0 +1,33 @@
+body {
+  background-color: #1d1d1d;
+}
+.App {
+  margin: 0 auto;
+  color: #fff;
+}
+
+.slick {
+  &-slider {
+    height: 450px;
+    border: 2px solid #fff;
+    padding: 1em;
+  }
+  &-track {
+    height: 100%;
+  }
+  &-list {
+    height: 100%;
+  }
+  &-slide {
+    height: 90%;
+    & > div {
+      height: 100%;
+      border: 2px solid yellow;
+      padding: 20px;
+      margin: 12px;
+    }
+  }
+  &-item {
+    height: 100%;
+  }
+}
