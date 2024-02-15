@@ -1,0 +1,33 @@
+
+h1{
+    width: 600px;
+    margin: 0 auto;
+}
+.container{
+    padding: 20px;
+    width: 600px;
+    margin: 0 auto;
+    
+}
+span{
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
+button{
+    margin: 10px;
+    padding: 5px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: white;
+
+}
+.black{
+    background-color: black;
+}
+.blue{
+    background-color: blue;
+}
+.yellow{
+    background-color: yellow;
+}
