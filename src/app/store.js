@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
-import usersSlice from "../features/usersSlice/usersSlice";
-import counterSlice from "../features/counterSlice/counterSlice";
+import housesSlice from "../features/housesSlice/housesSlice";
 
 const store = configureStore({
   reducer: {
-    users: usersSlice,
-    counter: counterSlice,
+    houses: housesSlice,
   },
 });
 
