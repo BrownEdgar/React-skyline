@@ -1,11 +1,11 @@
 import "./App.scss";
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { showAll } from "./features/housesSlice/housesSlice";
+import { getAllHouses, isAllHousesMustByShow, showAll } from "./features/housesSlice/housesSlice";
 
 export default function App() {
-  const houses = useSelector((state) => state.houses.houses);
-  const showAllHouses = useSelector((state) => state.houses.showAllHouses);
+  const houses = useSelector(getAllHouses);
+  const showAllHouses = useSelector(isAllHousesMustByShow);
   const dispatch = useDispatch();
 
   const toggleShowAllHouses = () => {

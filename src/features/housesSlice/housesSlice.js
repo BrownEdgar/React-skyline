@@ -83,6 +83,7 @@ const initialState = {
       sq_area: 932,
     },
   ],
+  showAllHouses: false
 };
 
 const housesSlice = createSlice({
@@ -93,7 +94,12 @@ const housesSlice = createSlice({
       state.showAllHouses = !state.showAllHouses;
     },
   },
+  selectors: {
+    getAllHouses: (state) => state.houses,
+    isAllHousesMustByShow: (state) => state.showAllHouses
+  }
 });
 
 export const { showAll } = housesSlice.actions;
+export const { getAllHouses, isAllHousesMustByShow } = housesSlice.selectors;
 export default housesSlice.reducer;
