@@ -1,0 +1,43 @@
+.App {
+  display: grid;
+  margin-top: 100px;
+  place-items: center;
+  .button-name {
+    font-size: 32px;
+    margin-bottom: 25px;
+    font-weight: bold;
+  }
+  .buttons-container {
+    margin-bottom: 20px;
+  }
+
+  .App__box {
+    font-size: 24px;
+    border-radius: 8px;
+    width: 600px;
+    padding: 24px;
+    border: 2px solid white;
+    font-weight: bolder;
+    -webkit-text-stroke: 0.5px black;
+  }
+
+  .box-yellow {
+    background-color: rgb(255, 234, 0);
+  }
+
+  .box-blue {
+    background-color: blue;
+  }
+
+  .box-black {
+    background-color: black;
+  }
+
+  button {
+    margin-right: 10px;
+    cursor: pointer;
+    width: 100px;
+    height: 30px;
+    font-size: 18px;
+  }
+}
