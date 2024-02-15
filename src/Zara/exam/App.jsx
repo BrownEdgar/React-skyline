@@ -5,30 +5,37 @@ import classNames from 'classnames';
 
 export default function App() {
     const [txt, setTxt] = useState("yellow")
-   
-    const handlechange1 =()=>{
-        setTxt("black")
+    const btn=["black","blue","yellow"]
 
-    }
-    const handlechange2 =()=>{
-        setTxt("blue")
+    const div = document.getElementById("container")
 
-    }
-    const handlechange3 =()=>{
-        setTxt("yellow")
+    const handlechange =(e)=>{
+        for (let i = 0; i < btn.length; i++) {
+            console.dir(div);
+            if (e.target.className===btn[i]){
 
+                div.className = "container " + btn[i]
+                setTxt(btn[i])
+            }
+        }
     }
+    
 
 
   return (
     <div>
         <h1>background is <span>{txt}</span></h1>
-        <div className='container' style={{backgroundColor:`${txt}`}}>
+        <div className='container' id="container">
             <h2><span>React events</span>(Change background)</h2>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius minima tenetur maiores corrupti quia aut, recusandae dolorum dolor voluptates fugit?</p>
-            <button className='black' onMouseMove={handlechange1}>blak</button>
-            <button className='blue' onMouseMove={handlechange2}>blue</button>
-            <button className='yellow' onMouseMove={handlechange3}>yellow</button>
+            {
+                btn.map((name,id)=>{
+                    return(
+                        <button key={id} className={name} onMouseEnter={(e)=>handlechange(e)}>{name}</button>
+                    )
+                })
+            }
+            
         </div>
     </div>
   )

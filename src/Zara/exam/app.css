@@ -1,10 +1,10 @@
 
 h1{
     width: 600px;
-    margin: 0 auto;
+    margin: 20px auto;
 }
 .container{
-    padding: 20px;
+    padding: 25px;
     width: 600px;
     margin: 0 auto;
     
@@ -19,15 +19,18 @@ button{
     padding: 5px;
     font-size: 20px;
     border-radius: 5px;
-    color: white;
+   
 
 }
 .black{
+    color: white;
     background-color: black;
 }
 .blue{
+    color: white;
     background-color: blue;
 }
 .yellow{
+    color: black;
     background-color: yellow;
 }
