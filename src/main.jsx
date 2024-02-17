@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client'
-import App from './Lessons/Slider2/App'
+import App from './Lessons/i18n_example/App'
 import './index.css'
 
 

@@ -1,20 +1,41 @@
-import React, { useState } from 'react'
-import moment from 'moment'
+import axios from 'axios';
+import React, { useState, useEffect, useRef } from 'react';
+import './Test.scss'
+
+const searchPostbyFilter = (posts, value) => {
+  return posts.filter(post => post.title.includes(value.toLowerCase()))
+}
 
 export default function Test() {
-  const [date, setDate] = useState(moment())
+  const [posts, setposts] = useState([])
+  const [searchValue, setSetsearchValue] = useState('')
 
-  const addTen = () => {
-    // setDate(moment().add(100, 'days'))
-    setDate(moment().subtract(100, 'days'))
+  const inputRef = useRef(null)
+
+  useEffect(() => {
+    axios('https://jsonplaceholder.typicode.com/posts')
+      .then(res => setposts(res.data))
+  }, [])
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    setSetsearchValue(inputRef.current.value)
   }
-  return (
-    <div>
-      <h1>
-        {date.format('MMM Do Y, hh')}
-      </h1>
 
-      <button onClick={addTen}>Add 10 days</button>
+  return (
+    <div className='container'>
+      <form onSubmit={handleSubmit}>
+        <input type="text" name="message" id="message" ref={inputRef} />
+        <input type="submit" value="search" />
+      </form>
+      {searchPostbyFilter(posts, searchValue).map(post => {
+        return (
+          <div key={post.id}>
+            <h2>{post.title}</h2>
+            <p>{post.body}</p>
+          </div>
+        )
+      })}
     </div>
   )
 }

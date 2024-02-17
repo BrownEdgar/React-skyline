@@ -1,0 +1,29 @@
+.App {
+  width: 900px;
+  margin: 40px auto;
+  .content {
+    background-color: #1d1d1d;
+    padding: 2rem;
+    color: #fff;
+    margin-top: 20px;
+    h2 {
+      color: orangered;
+      margin-bottom: 12px;
+      font-size: 40px;
+    }
+    p {
+      line-height: 1.6;
+      font-size: 18px;
+      margin: 20px 0;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      background-color: orangered;
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+      border-radius: 4px;
+      font-weight: 700;
+    }
+  }
+}
