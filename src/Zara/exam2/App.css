@@ -1,40 +1,45 @@
-body{
-    background-color: rgb(213, 213, 213);
-}
-h1{
-    margin: 10px;
+body {
+  background-color: rgb(213, 213, 213);
 }
 
-.container{
-    padding: 30px;
-    margin: 0 auto;
-    width: 800px;
-    background-color: white;
-}
-.container li{
-    cursor: pointer;
-    font-size: 20px;
-    list-style: none;
-    width: 80%;
-    margin-top: 5px;
-    padding: 5px;
-    /* background-color: rgb(213, 213, 213) ; */
-
-}
-.container li:hover{
-    background-color: green;
+h1 {
+  margin: 10px;
 }
 
-.contacts{
-    margin: 10px;
-    width: 80%;
-    font-size: 16px;
-    margin-top: 5px;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: 0 0 5px 1px rgb(213, 213, 213);
+.container {
+  padding: 30px;
+  margin: 0 auto;
+  width: 800px;
+  background-color: white;
+}
+
+.container li {
+  cursor: pointer;
+  font-size: 20px;
+  list-style: none;
+  width: 80%;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid grey;
+  padding: 4px;
+  /* background-color: rgb(213, 213, 213) ; */
+
+}
+
+.container li:hover {
+  background-color: grey;
+}
+
+.contacts {
+  margin: 10px;
+  width: 80%;
+  font-size: 16px;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px 1px rgb(213, 213, 213);
 }
 
 .active {
-    background-color: green;
+  background-color: green;
 }
