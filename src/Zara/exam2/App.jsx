@@ -44,8 +44,19 @@ export default function App() {
   }, [])
 
   const handleclic = (id,e)=>{
-    // e.target.className ="active"
-    console.dir(e.target);
+    // let y =[]
+    //  users.map((li,index)=>{
+    //   if(index!=id){
+    //     li.className='',
+    //      y.push(li)
+    //     }else{
+    //       li.className='activ'
+    //       y.push(li)
+    //     }
+    //   })
+    //   setUsers(y)
+    // console.log(y);
+    // console.dir(e.target);
     setUser(users[id])
     
   }
